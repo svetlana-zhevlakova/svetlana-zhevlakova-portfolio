@@ -26,6 +26,10 @@ function cx(...values: Array<string | undefined | null | false>) {
   return values.filter(Boolean).join(" ");
 }
 
+function isLinkProps(p: ButtonProps): p is ButtonAsLinkProps {
+  return typeof (p as ButtonAsLinkProps).href === "string";
+}
+
 const wrapperBase =
   "group relative inline-flex flex-col items-center whitespace-nowrap py-[var(--s-button-vertical-padding)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--p-info-color-focus-ring-default)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--s-page-background)] disabled:pointer-events-none disabled:opacity-50";
 
@@ -52,7 +56,8 @@ const variants: Record<
 };
 
 export function Button(props: ButtonProps) {
-  const { variant = "primary", className, leftIcon, rightIcon, ...rest } = props;
+  const { variant = "primary", className, leftIcon, rightIcon, children } =
+    props;
 
   const v = variants[variant];
   const wrapperClasses = cx(wrapperBase, v.wrapper, className);
@@ -74,7 +79,7 @@ export function Button(props: ButtonProps) {
             {leftIcon}
           </span>
         ) : null}
-        <span>{props.children}</span>
+        <span>{children}</span>
         {rightIcon ? (
           <span
             aria-hidden="true"
@@ -101,8 +106,17 @@ export function Button(props: ButtonProps) {
     </>
   );
 
-  if ("href" in rest) {
-    const { href, ...linkProps } = rest;
+  if (isLinkProps(props)) {
+    const {
+      href,
+      variant: _variant,
+      className: _className,
+      leftIcon: _leftIcon,
+      rightIcon: _rightIcon,
+      children: _children,
+      ...linkProps
+    } = props;
+
     return (
       <Link href={href} {...linkProps} className={wrapperClasses}>
         {content}
@@ -110,8 +124,17 @@ export function Button(props: ButtonProps) {
     );
   }
 
+  const {
+    variant: _variant,
+    className: _className,
+    leftIcon: _leftIcon,
+    rightIcon: _rightIcon,
+    children: _children,
+    ...buttonProps
+  } = props;
+
   return (
-    <button {...rest} className={wrapperClasses}>
+    <button {...buttonProps} className={wrapperClasses}>
       {content}
     </button>
   );
