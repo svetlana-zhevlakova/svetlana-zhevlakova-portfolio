@@ -1,0 +1,1226 @@
+{
+    "id": "VariableCollectionId:156:726",
+    "name": "Breakpoints",
+    "modes": {
+        "156:1": "XL",
+        "156:2": "SM"
+    },
+    "variableIds": [
+        "VariableID:201:1346",
+        "VariableID:156:731",
+        "VariableID:201:1351",
+        "VariableID:156:736",
+        "VariableID:156:727",
+        "VariableID:201:1352",
+        "VariableID:201:1347",
+        "VariableID:156:737",
+        "VariableID:156:735",
+        "VariableID:201:1348",
+        "VariableID:201:1349",
+        "VariableID:156:728",
+        "VariableID:156:729",
+        "VariableID:156:730",
+        "VariableID:201:1451",
+        "VariableID:201:1452",
+        "VariableID:156:732",
+        "VariableID:156:733",
+        "VariableID:156:734",
+        "VariableID:182:526",
+        "VariableID:182:527",
+        "VariableID:201:1549",
+        "VariableID:272:812",
+        "VariableID:272:813",
+        "VariableID:272:814",
+        "VariableID:201:1456",
+        "VariableID:201:1457",
+        "VariableID:201:1458",
+        "VariableID:201:1455",
+        "VariableID:201:1459",
+        "VariableID:201:1460",
+        "VariableID:222:430",
+        "VariableID:222:431",
+        "VariableID:222:432",
+        "VariableID:222:628",
+        "VariableID:222:629",
+        "VariableID:222:630",
+        "VariableID:271:127",
+        "VariableID:271:128"
+    ],
+    "variables": [
+        {
+            "id": "VariableID:156:727",
+            "name": "🖋️ Typography/Headline/h1Size",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:201:1341"
+                },
+                "156:2": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:156:717"
+                }
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 48,
+                    "alias": "VariableID:201:1341",
+                    "aliasName": "Typography/Size/fontSize48"
+                },
+                "156:2": {
+                    "resolvedValue": 32,
+                    "alias": "VariableID:156:717",
+                    "aliasName": "Typography/Size/fontSize32"
+                }
+            },
+            "scopes": [
+                "FONT_SIZE"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:156:728",
+            "name": "📐 Grid System/frameMinWidth",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": 1440,
+                "156:2": 1
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 1440,
+                    "alias": null
+                },
+                "156:2": {
+                    "resolvedValue": 1,
+                    "alias": null
+                }
+            },
+            "scopes": [
+                "WIDTH_HEIGHT"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:156:729",
+            "name": "📐 Grid System/frameMaxWidth",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": 9999,
+                "156:2": 1279
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 9999,
+                    "alias": null
+                },
+                "156:2": {
+                    "resolvedValue": 1279,
+                    "alias": null
+                }
+            },
+            "scopes": [
+                "WIDTH_HEIGHT"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:156:730",
+            "name": "📐 Grid System/columns",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": 12,
+                "156:2": 4
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 12,
+                    "alias": null
+                },
+                "156:2": {
+                    "resolvedValue": 4,
+                    "alias": null
+                }
+            },
+            "scopes": [
+                "GAP"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:156:731",
+            "name": "🖋️ Typography/Paragraph/baseSize",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:201:1339"
+                },
+                "156:2": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:156:720"
+                }
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 18,
+                    "alias": "VariableID:201:1339",
+                    "aliasName": "Typography/Size/fontSize18"
+                },
+                "156:2": {
+                    "resolvedValue": 16,
+                    "alias": "VariableID:156:720",
+                    "aliasName": "Typography/Size/fontSize16"
+                }
+            },
+            "scopes": [
+                "FONT_SIZE"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:156:732",
+            "name": "🖋️ Typography/Headline/h1Line",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:201:1342"
+                },
+                "156:2": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:156:722"
+                }
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 56,
+                    "alias": "VariableID:201:1342",
+                    "aliasName": "Typography/Line Height/lineHeight48"
+                },
+                "156:2": {
+                    "resolvedValue": 40,
+                    "alias": "VariableID:156:722",
+                    "aliasName": "Typography/Line Height/lineHeight32"
+                }
+            },
+            "scopes": [
+                "LINE_HEIGHT"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:156:733",
+            "name": "🖋️ Typography/Headline/h2Size",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:156:717"
+                },
+                "156:2": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:156:718"
+                }
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 32,
+                    "alias": "VariableID:156:717",
+                    "aliasName": "Typography/Size/fontSize32"
+                },
+                "156:2": {
+                    "resolvedValue": 24,
+                    "alias": "VariableID:156:718",
+                    "aliasName": "Typography/Size/fontSize24"
+                }
+            },
+            "scopes": [
+                "FONT_SIZE"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:156:734",
+            "name": "🖋️ Typography/Headline/h2Line",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:156:722"
+                },
+                "156:2": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:156:723"
+                }
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 40,
+                    "alias": "VariableID:156:722",
+                    "aliasName": "Typography/Line Height/lineHeight32"
+                },
+                "156:2": {
+                    "resolvedValue": 36,
+                    "alias": "VariableID:156:723",
+                    "aliasName": "Typography/Line Height/lineHeight24"
+                }
+            },
+            "scopes": [
+                "LINE_HEIGHT"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:156:735",
+            "name": "🖋️ Typography/Paragraph/baseLine",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:201:1344"
+                },
+                "156:2": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:156:725"
+                }
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 28,
+                    "alias": "VariableID:201:1344",
+                    "aliasName": "Typography/Line Height/lineHeight18"
+                },
+                "156:2": {
+                    "resolvedValue": 24,
+                    "alias": "VariableID:156:725",
+                    "aliasName": "Typography/Line Height/lineHeight16"
+                }
+            },
+            "scopes": [
+                "LINE_HEIGHT"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:156:736",
+            "name": "🖋️ Typography/Caption/captionSize",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:201:1340"
+                },
+                "156:2": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:182:528"
+                }
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 14,
+                    "alias": "VariableID:201:1340",
+                    "aliasName": "Typography/Size/fontSize14"
+                },
+                "156:2": {
+                    "resolvedValue": 12,
+                    "alias": "VariableID:182:528",
+                    "aliasName": "Typography/Size/fontSize12"
+                }
+            },
+            "scopes": [
+                "FONT_SIZE"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:156:737",
+            "name": "🖋️ Typography/Caption/captionLine",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:201:1343"
+                },
+                "156:2": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:182:529"
+                }
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 20,
+                    "alias": "VariableID:201:1343",
+                    "aliasName": "Typography/Line Height/lineHeight14"
+                },
+                "156:2": {
+                    "resolvedValue": 16,
+                    "alias": "VariableID:182:529",
+                    "aliasName": "Typography/Line Height/lineHeight12"
+                }
+            },
+            "scopes": [
+                "LINE_HEIGHT"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:182:526",
+            "name": "🖋️ Typography/Headline/h3Size",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:156:719"
+                },
+                "156:2": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:201:1339"
+                }
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 20,
+                    "alias": "VariableID:156:719",
+                    "aliasName": "Typography/Size/fontSize20"
+                },
+                "156:2": {
+                    "resolvedValue": 18,
+                    "alias": "VariableID:201:1339",
+                    "aliasName": "Typography/Size/fontSize18"
+                }
+            },
+            "scopes": [
+                "ALL_SCOPES"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:182:527",
+            "name": "🖋️ Typography/Headline/h3Line",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:156:724"
+                },
+                "156:2": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:201:1344"
+                }
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 32,
+                    "alias": "VariableID:156:724",
+                    "aliasName": "Typography/Line Height/lineHeight20"
+                },
+                "156:2": {
+                    "resolvedValue": 28,
+                    "alias": "VariableID:201:1344",
+                    "aliasName": "Typography/Line Height/lineHeight18"
+                }
+            },
+            "scopes": [
+                "ALL_SCOPES"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:201:1346",
+            "name": "🖋️ Typography/Title/titleSize",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:156:719"
+                },
+                "156:2": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:201:1339"
+                }
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 20,
+                    "alias": "VariableID:156:719",
+                    "aliasName": "Typography/Size/fontSize20"
+                },
+                "156:2": {
+                    "resolvedValue": 18,
+                    "alias": "VariableID:201:1339",
+                    "aliasName": "Typography/Size/fontSize18"
+                }
+            },
+            "scopes": [
+                "FONT_SIZE"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:201:1347",
+            "name": "🖋️ Typography/Title/titleLine",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:156:724"
+                },
+                "156:2": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:201:1344"
+                }
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 32,
+                    "alias": "VariableID:156:724",
+                    "aliasName": "Typography/Line Height/lineHeight20"
+                },
+                "156:2": {
+                    "resolvedValue": 28,
+                    "alias": "VariableID:201:1344",
+                    "aliasName": "Typography/Line Height/lineHeight18"
+                }
+            },
+            "scopes": [
+                "LINE_HEIGHT"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:201:1348",
+            "name": "🖋️ Typography/Paragraph/smallSize",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:156:720"
+                },
+                "156:2": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:201:1340"
+                }
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 16,
+                    "alias": "VariableID:156:720",
+                    "aliasName": "Typography/Size/fontSize16"
+                },
+                "156:2": {
+                    "resolvedValue": 14,
+                    "alias": "VariableID:201:1340",
+                    "aliasName": "Typography/Size/fontSize14"
+                }
+            },
+            "scopes": [
+                "FONT_SIZE"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:201:1349",
+            "name": "🖋️ Typography/Paragraph/smallLine",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:156:725"
+                },
+                "156:2": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:201:1343"
+                }
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 24,
+                    "alias": "VariableID:156:725",
+                    "aliasName": "Typography/Line Height/lineHeight16"
+                },
+                "156:2": {
+                    "resolvedValue": 20,
+                    "alias": "VariableID:201:1343",
+                    "aliasName": "Typography/Line Height/lineHeight14"
+                }
+            },
+            "scopes": [
+                "LINE_HEIGHT"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:201:1351",
+            "name": "🖋️ Typography/Callout/calloutSize",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:156:718"
+                },
+                "156:2": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:156:719"
+                }
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 24,
+                    "alias": "VariableID:156:718",
+                    "aliasName": "Typography/Size/fontSize24"
+                },
+                "156:2": {
+                    "resolvedValue": 20,
+                    "alias": "VariableID:156:719",
+                    "aliasName": "Typography/Size/fontSize20"
+                }
+            },
+            "scopes": [
+                "FONT_SIZE"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:201:1352",
+            "name": "🖋️ Typography/Callout/calloutLine",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:156:723"
+                },
+                "156:2": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:156:724"
+                }
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 36,
+                    "alias": "VariableID:156:723",
+                    "aliasName": "Typography/Line Height/lineHeight24"
+                },
+                "156:2": {
+                    "resolvedValue": 32,
+                    "alias": "VariableID:156:724",
+                    "aliasName": "Typography/Line Height/lineHeight20"
+                }
+            },
+            "scopes": [
+                "LINE_HEIGHT"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:201:1451",
+            "name": "📐 Grid System/gutter",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:163:514"
+                },
+                "156:2": 0
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 16,
+                    "alias": "VariableID:163:514",
+                    "aliasName": "Spacing/space16"
+                },
+                "156:2": {
+                    "resolvedValue": 0,
+                    "alias": null
+                }
+            },
+            "scopes": [
+                "GAP"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:201:1452",
+            "name": "📐 Grid System/margin",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:163:521"
+                },
+                "156:2": 0
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 44,
+                    "alias": "VariableID:163:521",
+                    "aliasName": "Spacing/space44"
+                },
+                "156:2": {
+                    "resolvedValue": 0,
+                    "alias": null
+                }
+            },
+            "scopes": [
+                "GAP"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:201:1455",
+            "name": "Section/maxWidth",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": 800,
+                "156:2": 600
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 800,
+                    "alias": null
+                },
+                "156:2": {
+                    "resolvedValue": 600,
+                    "alias": null
+                }
+            },
+            "scopes": [
+                "WIDTH_HEIGHT"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:201:1456",
+            "name": "Section/toSectionGap",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:163:522"
+                },
+                "156:2": 0
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 48,
+                    "alias": "VariableID:163:522",
+                    "aliasName": "Spacing/space48"
+                },
+                "156:2": {
+                    "resolvedValue": 0,
+                    "alias": null
+                }
+            },
+            "scopes": [
+                "GAP"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:201:1457",
+            "name": "Section/toSubsectionGap",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:163:515"
+                },
+                "156:2": 0
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 20,
+                    "alias": "VariableID:163:515",
+                    "aliasName": "Spacing/space20"
+                },
+                "156:2": {
+                    "resolvedValue": 0,
+                    "alias": null
+                }
+            },
+            "scopes": [
+                "GAP"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:201:1458",
+            "name": "Section/toTitleGap",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:163:512"
+                },
+                "156:2": 0
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 8,
+                    "alias": "VariableID:163:512",
+                    "aliasName": "Spacing/space8"
+                },
+                "156:2": {
+                    "resolvedValue": 0,
+                    "alias": null
+                }
+            },
+            "scopes": [
+                "GAP"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:201:1459",
+            "name": "Section/columns",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": 2,
+                "156:2": 0
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 2,
+                    "alias": null
+                },
+                "156:2": {
+                    "resolvedValue": 0,
+                    "alias": null
+                }
+            },
+            "scopes": [
+                "GAP"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:201:1460",
+            "name": "Section/gutter",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:163:514"
+                },
+                "156:2": 0
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 16,
+                    "alias": "VariableID:163:514",
+                    "aliasName": "Spacing/space16"
+                },
+                "156:2": {
+                    "resolvedValue": 0,
+                    "alias": null
+                }
+            },
+            "scopes": [
+                "GAP"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:201:1549",
+            "name": "Button/toHoverMark",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:163:511"
+                },
+                "156:2": 0
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 4,
+                    "alias": "VariableID:163:511",
+                    "aliasName": "Spacing/space4"
+                },
+                "156:2": {
+                    "resolvedValue": 0,
+                    "alias": null
+                }
+            },
+            "scopes": [
+                "GAP"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:222:430",
+            "name": "Tag/radius",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:163:509"
+                },
+                "156:2": 0
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 12,
+                    "alias": "VariableID:163:509",
+                    "aliasName": "Raduis/radiusXS"
+                },
+                "156:2": {
+                    "resolvedValue": 0,
+                    "alias": null
+                }
+            },
+            "scopes": [
+                "CORNER_RADIUS"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:222:431",
+            "name": "Tag/horizontalPadding",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:163:513"
+                },
+                "156:2": 0
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 12,
+                    "alias": "VariableID:163:513",
+                    "aliasName": "Spacing/space12"
+                },
+                "156:2": {
+                    "resolvedValue": 0,
+                    "alias": null
+                }
+            },
+            "scopes": [
+                "GAP"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:222:432",
+            "name": "Tag/verticalPadding",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:163:511"
+                },
+                "156:2": 0
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 4,
+                    "alias": "VariableID:163:511",
+                    "aliasName": "Spacing/space4"
+                },
+                "156:2": {
+                    "resolvedValue": 0,
+                    "alias": null
+                }
+            },
+            "scopes": [
+                "GAP"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:222:628",
+            "name": "Card/horizontalPadding",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:163:515"
+                },
+                "156:2": 0
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 20,
+                    "alias": "VariableID:163:515",
+                    "aliasName": "Spacing/space20"
+                },
+                "156:2": {
+                    "resolvedValue": 0,
+                    "alias": null
+                }
+            },
+            "scopes": [
+                "GAP"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:222:629",
+            "name": "Card/verticalPadding",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:163:515"
+                },
+                "156:2": 0
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 20,
+                    "alias": "VariableID:163:515",
+                    "aliasName": "Spacing/space20"
+                },
+                "156:2": {
+                    "resolvedValue": 0,
+                    "alias": null
+                }
+            },
+            "scopes": [
+                "GAP"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:222:630",
+            "name": "Card/radius",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:163:508"
+                },
+                "156:2": 0
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 24,
+                    "alias": "VariableID:163:508",
+                    "aliasName": "Raduis/radiusXL"
+                },
+                "156:2": {
+                    "resolvedValue": 0,
+                    "alias": null
+                }
+            },
+            "scopes": [
+                "CORNER_RADIUS"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:271:127",
+            "name": "Card/toTitlegap",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:163:512"
+                },
+                "156:2": 0
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 8,
+                    "alias": "VariableID:163:512",
+                    "aliasName": "Spacing/space8"
+                },
+                "156:2": {
+                    "resolvedValue": 0,
+                    "alias": null
+                }
+            },
+            "scopes": [
+                "GAP"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:271:128",
+            "name": "Card/toElementgap",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:163:513"
+                },
+                "156:2": 0
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 12,
+                    "alias": "VariableID:163:513",
+                    "aliasName": "Spacing/space12"
+                },
+                "156:2": {
+                    "resolvedValue": 0,
+                    "alias": null
+                }
+            },
+            "scopes": [
+                "GAP"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:272:812",
+            "name": "Button/verticalPadding",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:163:512"
+                },
+                "156:2": 0
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 8,
+                    "alias": "VariableID:163:512",
+                    "aliasName": "Spacing/space8"
+                },
+                "156:2": {
+                    "resolvedValue": 0,
+                    "alias": null
+                }
+            },
+            "scopes": [
+                "GAP"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:272:813",
+            "name": "Button/horizontalPading",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:163:514"
+                },
+                "156:2": 0
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 16,
+                    "alias": "VariableID:163:514",
+                    "aliasName": "Spacing/space16"
+                },
+                "156:2": {
+                    "resolvedValue": 0,
+                    "alias": null
+                }
+            },
+            "scopes": [
+                "GAP"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        },
+        {
+            "id": "VariableID:272:814",
+            "name": "Button/radius",
+            "description": "",
+            "type": "FLOAT",
+            "valuesByMode": {
+                "156:1": {
+                    "type": "VARIABLE_ALIAS",
+                    "id": "VariableID:163:509"
+                },
+                "156:2": 0
+            },
+            "resolvedValuesByMode": {
+                "156:1": {
+                    "resolvedValue": 12,
+                    "alias": "VariableID:163:509",
+                    "aliasName": "Raduis/radiusXS"
+                },
+                "156:2": {
+                    "resolvedValue": 0,
+                    "alias": null
+                }
+            },
+            "scopes": [
+                "CORNER_RADIUS"
+            ],
+            "hiddenFromPublishing": false,
+            "codeSyntax": {}
+        }
+    ]
+}
