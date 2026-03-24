@@ -43,6 +43,7 @@ export default function HomePage() {
               tags={["Leadership", "Culture"]}
               title="Establishing design function & mentorship in a service company"
               focusText="Team autonomy / high-quality delivery."
+              href="/cases/leadership-and-culture"
             />
           </section>
         </div>

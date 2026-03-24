@@ -10,23 +10,30 @@ export const CASES: CaseMeta[] = [
   {
     slug: "kids-party-marketplace",
     title:
-      "Building a marketplace that connects parents with kids’ party venues",
+      "Building a Marketplace That Connects Parents With Kids’ Party Venues",
     tags: ["B2B2C", "Marketplace"],
     focus: "Booking configuration / pricing transparency / venue admin tools."
   },
   {
     slug: "reflection-driven-mood-tracker",
     title:
-      "Turning a failing mood tracker into a reflection-driven product concept",
+      "Turning a Failing Mood Tracker Into a Reflection-Driven Product Concept",
     tags: ["R&D", "AI"],
     focus: "Engagement loops / reflective check-ins / AI-supported insights."
   },
   {
     slug: "data-heavy-workflows",
-    title: "Designing actionable workflows in a data-heavy platform",
+    title: "Designing Actionable Workflows in a Data-Heavy Platform",
     tags: ["B2B", "SaaS"],
     focus:
       "Admin dashboard / complex data tables / delivery process improvements / design mentorship."
+  },
+  {
+    slug: "leadership-and-culture",
+    title: "Establishing Design Function & Mentorship in a Service Company",
+    tags: ["Leadership", "Culture"],
+    focus:
+      "Team autonomy / high-quality delivery."
   }
 ];
 

@@ -1,88 +1,168 @@
-import Link from "next/link";
+import Image from "next/image";
 
 import { CASES } from "@/config/cases";
-import { Tag } from "@/components/Tag";
+import { Body } from "@/components/Body";
+import { CaseHeader } from "@/components/CaseHeader";
+import { SectionReflection } from "@/components/SectionReflection";
+import { BackNavigation } from "@/components/case/BackNavigation";
+import { NextCaseNavigation } from "@/components/case/NextCaseNavigation";
+import { ScrollAutoplayVideo } from "@/components/case/ScrollAutoplayVideo";
 
-const CURRENT_SLUG = "reflection-driven-mood-tracker";
 const currentCase = CASES[1];
 const nextCase = CASES[2];
+const HERO_1_SRC = "/cases/reflection-driven-mood-tracker/hero-1.png";
+const HERO_2_SRC = "/cases/reflection-driven-mood-tracker/hero-2.png";
+const HERO_3_SRC = "/cases/reflection-driven-mood-tracker/hero-3.png";
+const CORE_LOOP_VIDEO_SRC = "/cases/reflection-driven-mood-tracker/core-loop-flow.mov";
+const CORE_LOOP_VIDEO_FALLBACK_SRC = "/cases/reflection-driven-mood-tracker/core-loop-flow.mp4";
 
 export default function ReflectionDrivenMoodTrackerCasePage() {
   return (
     <main className="w-full bg-[var(--s-page-background)]">
-      <div className="mx-auto w-full max-w-[1440px] px-[var(--s-grid-system-margin)] py-10">
-        <section className="mx-auto flex w-full max-w-[800px] flex-col gap-[var(--s-section-to-section-gap)]">          {/* Title & tags */}
-          <header className="flex flex-col gap-[var(--s-section-to-subsection-gap)]">
-            <div className="flex items-start gap-[var(--s-card-to-titlegap)]">
-              {currentCase.tags.map((tag) => (
-                <Tag key={tag}>{tag}</Tag>
-              ))}
-            </div>
-            <h1 className="text-[length:var(--s-typography-headline-h1size)] font-normal leading-[var(--s-typography-headline-h1line)] text-[var(--s-section-text)]">
-              {currentCase.title}
-            </h1>
-          </header>
+      <div className="flex w-full flex-col items-center gap-[var(--s-section-to-section-gap)] px-[var(--s-grid-system-margin)] py-[var(--s-grid-system-vertical-padding)]">
+        <BackNavigation />
 
-          {/* Intro paragraph (partial content for now) */}
-          <section className="flex flex-col gap-[var(--s-section-to-title-gap)] text-[var(--s-section-text)]">
-            <p className="text-[length:var(--s-typography-paragraph-base-size)] leading-[var(--s-typography-paragraph-base-line)]">
-              This project explores how to turn a low-engagement mood tracker
-              into a reflection-driven product concept. The goal was to move from
-              passive logging to meaningful, structured reflection that helps
-              people notice patterns and act on them.
-            </p>
-          </section>
-
-          {/* Snapshot grid (Role/Platforms/Stage/Year) */}
-          <section className="grid grid-cols-[repeat(2,minmax(0,1fr))] gap-x-4 gap-y-4 text-[var(--s-section-text)] max-[700px]:grid-cols-1">
-            <SnapshotItem
-              label="Role"
-              value="Product Designer (discovery & concept)"
-            />
-            <SnapshotItem label="Platforms" value="Mobile and Desktop Web" />
-            <SnapshotItem label="Stage" value="R&D concept exploration" />
-            <SnapshotItem label="Year" value="2025" />
-          </section>
-
-          {/* Bottom navigation */}
-          <section className="flex w-full items-center justify-between pt-[var(--s-section-to-section-gap)] text-[length:var(--s-typography-paragraph-base-size)] leading-[var(--s-typography-paragraph-base-line)]">
-            <Link
-              href="/#cases"
-              className="inline-flex items-center gap-2 text-[var(--s-button-link-default-text)] hover:text-[var(--s-button-link-hover-text)]"
-            >
-              <span aria-hidden="true">←</span>
-              <span>Back to case studies</span>
-            </Link>
-
-            <Link
-              href={`/cases/${nextCase.slug}`}
-              className="inline-flex items-center gap-2 text-[var(--s-button-link-default-text)] hover:text-[var(--s-button-link-hover-text)]"
-            >
-              <span>Next case study</span>
-              <span aria-hidden="true">→</span>
-            </Link>
-          </section>
+        <section className="flex w-full max-w-[800px] flex-col gap-[var(--s-section-to-subsection-gap)]">
+          <CaseHeader
+            variant="h1"
+            title={currentCase.title}
+            tags={currentCase.tags}
+            callout="How I reframed an AI mood tracker from repetitive logging into meaningful reflection, defined a framework to evaluate AI output quality, and designed personalized dashboards that made each interaction actually useful."
+          />
+          <Body
+            variant="snapshot"
+            snapshotItems={[
+              { title: "Role", content: "Product Designer" },
+              { title: "Stage", content: "R&D, Post-V0" },
+              { title: "Platforms", content: "Chrome Extension, Web" },
+              { title: "Year", content: "2025" }
+            ]}
+          />
         </section>
+
+        <section className="h-[600px] w-full max-w-[1307px] overflow-hidden rounded-[var(--s-card-radius)] bg-[var(--s-media-section-background)] p-3 max-[1200px]:h-auto">
+          <div className="grid h-full w-full grid-cols-[334px_394px_531px] gap-3 max-[1200px]:grid-cols-1">
+            <div className="relative h-[366px] min-h-[240px] overflow-hidden rounded-[var(--s-media-section-image-radius)] max-[1200px]:h-full">
+              <Image
+                src={HERO_1_SRC}
+                alt="Mood check-in interface"
+                fill
+                sizes="(min-width: 1301px) 334px, 100vw"
+                className="rounded-[var(--s-media-section-image-radius)] object-cover"
+              />
+            </div>
+            <div className="relative h-full min-h-[240px] overflow-hidden rounded-[var(--s-media-section-image-radius)]">
+              <Image
+                src={HERO_2_SRC}
+                alt="Insights dashboard detail"
+                fill
+                sizes="(min-width: 1301px) 394px, 100vw"
+                className="rounded-[var(--s-media-section-image-radius)] object-cover"
+              />
+            </div>
+            <div className="relative h-full min-h-[240px] overflow-hidden rounded-[var(--s-media-section-image-radius)]">
+              <Image
+                src={HERO_3_SRC}
+                alt="Analytics and trends dashboard"
+                fill
+                sizes="(min-width: 1301px) 531px, 100vw"
+                className="rounded-[var(--s-media-section-image-radius)] object-cover"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section className="flex w-full max-w-[800px] flex-col gap-[var(--s-section-to-subsection-gap)]">
+          <CaseHeader variant="h2" title="When Tracking Feels Pointless, Users Leave" tags={["Problem framing"]} />
+          <Body
+            variant="text"
+            text="The initial version of the product saw strong early adoption, but engagement dropped sharply by week three. The problem wasn't technical: users were asked to log their mood repeatedly but got almost nothing in return. The only feedback was a basic mood chart that was hard to find, offering no interpretation or meaningful insight. Each interaction ended with a random 'fun' GIF, which caused confusion and even undermined trust in a sensitive context. Without clear value or understanding, there was no reason for users to keep participating, making long-term engagement unsustainable."
+          />
+        </section>
+
+        <section className="flex w-full max-w-[800px] flex-col gap-[var(--s-section-to-subsection-gap)]">
+          <CaseHeader variant="h2" title="Designing For Reflection, Not Just Logging" tags={["Design strategy"]} />
+          <Body
+            variant="text"
+            text="I approached the redesign as a strategic reset, turning the product from a daily mood tracker into a reflection-driven system where insight is the main experience. I defined a conceptual framework for AI output quality with four dimensions: relevance to context, emotional appropriateness, novelty, and subtle actionability. We didn't implement testing, but this framework guided design choices around prompt structure, content personalization, and the insights dashboard to ensure the product delivered meaningful reflections instead of raw data."
+          />
+        </section>
+
+        <section className="flex w-full max-w-[800px] flex-col gap-[var(--s-section-to-subsection-gap)]">
+          <CaseHeader variant="h2" title="Core Loop For Reflection And Insight" tags={["Key flow"]} />
+          <Body
+            variant="text"
+            text="Redesigned the core experience to prioritize meaningful reflection over raw data. Check-ins were reduced to three context-aware moments per week to improve compliance and trend reliability, with emotional state reframed as 'Vital' to remove judgment and self-censorship. Each entry offered immediate trend context and optional attribution to influencers, embedding reflection into the loop. Insights became the primary output through a personal dashboard that highlighted patterns, directional change, and historical trends, with AI acting as a translation layer to interpret data rather than automate it."
+          />
+          <div className="flex w-full justify-center">
+            <div className="relative h-[404px] w-[499px] max-w-full overflow-hidden rounded-[var(--s-card-radius)] border border-[var(--s-media-section-border)]">
+              <ScrollAutoplayVideo
+                className="size-full rounded-[var(--s-card-radius)] object-contain"
+                threshold={0.6}
+                sources={[
+                  { src: CORE_LOOP_VIDEO_SRC },
+                  { src: CORE_LOOP_VIDEO_FALLBACK_SRC, type: "video/mp4" }
+                ]}
+              />
+            </div>
+          </div>
+        </section>
+
+        <section className="flex w-full max-w-[800px] flex-col gap-[var(--s-section-to-subsection-gap)]">
+          <CaseHeader
+            variant="h2"
+            title="LLM Evaluation Framework For Meaningful Feedback"
+            tags={["Design evaluation"]}
+          />
+          <Body
+            variant="text"
+            text="To make AI-generated reflections genuinely valuable, I defined a conceptual evaluation framework focused on output quality rather than technical metrics. I identified four dimensions critical to user trust and engagement: relevance, emotional appropriateness, novelty, and subtle actionability. This framework guided design decisions around prompt structure, personalization, and dashboard presentation. It allowed us to reason about AI behavior, anticipate low-value outputs, and ensure the system could support long-term engagement."
+          />
+        </section>
+
+        <section className="flex w-full max-w-[800px] flex-col gap-[var(--s-section-to-subsection-gap)]">
+          <CaseHeader
+            variant="h2"
+            title="Insights-Driven Redesign To Boost Engagement"
+            tags={["Outcome"]}
+          />
+          <Body
+            variant="text"
+            text="The redesign established a clear V2 concept focused on driving meaningful engagement. We started with hypotheses about what would make mood tracking valuable and used AI to validate these ideas within the concept, shaping how reflections and insights could work in practice. The project clarified why the original product failed to retain users and produced a concrete framework for future design decisions around reflection-driven interactions."
+          />
+        </section>
+
+        <SectionReflection
+          amount={4}
+          items={[
+            {
+              title: "Immediate Value",
+              content: "Users stay engaged only when every check-in provides clear insight."
+            },
+            {
+              title: "AI as Translator",
+              content:
+                "AI should interpret and clarify user input, guiding reflection without pressure."
+            },
+            {
+              title: "Meaningful Novelty",
+              content:
+                "Variation keeps the experience engaging; repetition causes fatigue."
+            },
+            {
+              title: "Reframe for Impact",
+              content:
+                "In R&D, redefining the problem often matters more than interface refinement."
+            }
+          ]}
+        />
+
+        <NextCaseNavigation
+          title={nextCase.title}
+          href={`/cases/${nextCase.slug}`}
+        />
       </div>
     </main>
-  );
-}
-
-type SnapshotItemProps = {
-  label: string;
-  value: string;
-};
-
-function SnapshotItem({ label, value }: SnapshotItemProps) {
-  return (
-    <div className="flex flex-col gap-1">
-      <div className="text-[length:var(--s-typography-caption-caption-size)] leading-[var(--s-typography-caption-caption-line)] text-[var(--s-section-caption)]">
-        {label}
-      </div>
-      <div className="text-[length:var(--s-typography-paragraph-base-size)] leading-[var(--s-typography-paragraph-base-line)] text-[var(--s-section-text)]">
-        {value}
-      </div>
-    </div>
   );
 }
 
