@@ -1,14 +1,14 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 
-const workspaceRoot = path.resolve(import.meta.dirname, "..", "..");
-const figmaExportDir = path.join(workspaceRoot, "JSON");
+const workspaceRoot = path.resolve(import.meta.dirname, "..");
+const figmaExportDir = path.join(workspaceRoot, "from-figma", "JSON");
 const outFile = path.join(import.meta.dirname, "..", "src", "styles", "tokens.css");
 
 const SOURCES = [
-  path.join(figmaExportDir, "🧩 Primitives.json"),
-  path.join(figmaExportDir, "Mode tokens.json"),
-  path.join(figmaExportDir, "Breakpoints.json")
+  path.join(figmaExportDir, "Primitives-new.json"),
+  path.join(figmaExportDir, "Mode tokens-new.json"),
+  path.join(figmaExportDir, "Breakpoints-new.json")
 ];
 
 function stripEmoji(input) {
@@ -84,9 +84,10 @@ function buildIdIndex(collections) {
   const idx = new Map();
 
   for (const c of collections) {
+    const isPrimitivesCollection = toKebab(c.name ?? "").includes("primitives");
     for (const v of c.variables ?? []) {
       const segments = splitSegments(v.name);
-      const cssVar = varNameFromSegments(segments, c.name === "🧩 Primitives" ? "p" : "s");
+      const cssVar = varNameFromSegments(segments, isPrimitivesCollection ? "p" : "s");
       idx.set(v.id, { name: v.name, segments, type: v.type, cssVar });
     }
   }

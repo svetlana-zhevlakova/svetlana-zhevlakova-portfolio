@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { TopNavigation } from "@/components/nav/TopNavigation";
+import { Header } from "@/components/nav/Header";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
@@ -39,9 +39,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme="light" className={overusedGrotesk.variable}>
-      <body className={overusedGrotesk.className}>
-        <TopNavigation />
-        {children}
+      <body
+        className={`${overusedGrotesk.className} flex min-h-dvh flex-col bg-[var(--s-page-background)]`}
+      >
+        <Header />
+        <div className="flex flex-1 flex-col">{children}</div>
         <Footer />
       </body>
     </html>

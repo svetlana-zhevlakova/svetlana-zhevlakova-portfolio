@@ -1,6 +1,7 @@
 /*
   AUTO-GENERATED FILE — DO NOT EDIT.
-  Source: JSON/🧩 Primitives.json, JSON/Mode tokens.json, JSON/Breakpoints.json
+  Source: from-figma/JSON/Primitives-new.json, from-figma/JSON/Mode tokens-new.json, from-figma/JSON/Breakpoints-new.json
+  Run: npm run tokens (from /site)
 */
 
 :root {
@@ -71,13 +72,13 @@
   --s-section-caption: var(--p-primary-color-primary600);
   --s-page-background: var(--p-base-color-light);
   --s-button-link-default-text: var(--p-primary-color-primary900);
-  --s-button-link-hover-text: var(--p-primary-color-primary900);
-  --s-button-link-hover-border: var(--p-primary-color-primary900);
+  --s-button-link-hover-text: var(--p-primary-color-primary800);
+  --s-button-link-hover-border: var(--p-primary-color-primary800);
   --s-tag-background: var(--p-primary-color-primary50);
   --s-tag-border: var(--p-primary-color-primary200);
   --s-tag-text: var(--p-primary-color-primary800);
   --s-button-link-default-icon: var(--p-primary-color-primary900);
-  --s-button-link-hover-icon: var(--p-primary-color-primary900);
+  --s-button-link-hover-icon: var(--p-primary-color-primary800);
   --s-card-hover-background: var(--p-primary-color-primary100);
   --s-card-hover-border: var(--p-primary-color-primary300);
   --s-card-hover-text: var(--p-primary-color-primary900);
@@ -94,93 +95,100 @@
   --s-content-item-hover-text: var(--p-primary-color-primary900);
   --s-content-item-hover-border: var(--p-primary-color-primary900);
   --s-content-item-active-icon: var(--p-primary-color-primary900);
+  --s-kpi-default-background: var(--p-primary-color-primary100);
+  --s-kpi-default-border: var(--p-primary-color-primary100);
+  --s-kpi-default-text: var(--p-primary-color-primary900);
+  --s-kpi-default-supporting-text: var(--p-primary-color-primary600);
+  --s-media-section-background: var(--p-primary-color-primary200);
+  --s-media-section-border: var(--p-primary-color-primary300);
 }
 
 :root {
-  /* responsive tokens (canonical / XL) */
-  --s-typography-headline-h1size: var(--p-typography-size-font-size48);
-  --s-grid-system-frame-min-width: 1440px;
-  --s-grid-system-frame-max-width: 9999px;
-  --s-grid-system-columns: 12px;
-  --s-typography-paragraph-base-size: var(--p-typography-size-font-size18);
-  --s-typography-headline-h1line: var(--p-typography-line-height-line-height48);
-  --s-typography-headline-h2size: var(--p-typography-size-font-size32);
-  --s-typography-headline-h2line: var(--p-typography-line-height-line-height32);
-  --s-typography-paragraph-base-line: var(--p-typography-line-height-line-height18);
-  --s-typography-caption-caption-size: var(--p-typography-size-font-size14);
-  --s-typography-caption-caption-line: var(--p-typography-line-height-line-height14);
-  --s-typography-headline-h3size: var(--p-typography-size-font-size20);
-  --s-typography-headline-h3line: var(--p-typography-line-height-line-height20);
-  --s-typography-title-title-size: var(--p-typography-size-font-size20);
-  --s-typography-title-title-line: var(--p-typography-line-height-line-height20);
-  --s-typography-paragraph-small-size: var(--p-typography-size-font-size16);
-  --s-typography-paragraph-small-line: var(--p-typography-line-height-line-height16);
-  --s-typography-callout-callout-size: var(--p-typography-size-font-size24);
-  --s-typography-callout-callout-line: var(--p-typography-line-height-line-height24);
-  --s-grid-system-gutter: var(--p-spacing-space16);
-  --s-grid-system-margin: var(--p-spacing-space44);
-  --s-section-max-width: 800px;
+  /* responsive tokens (mobile-first / SM) */
+  --s-typography-headline-h1size: var(--p-typography-size-font-size32);
+  --s-grid-system-frame-min-width: 1px;
+  --s-grid-system-frame-max-width: 1279px;
+  --s-grid-system-columns: 4px;
+  --s-typography-paragraph-base-size: var(--p-typography-size-font-size16);
+  --s-typography-headline-h1line: var(--p-typography-line-height-line-height32);
+  --s-typography-headline-h2size: var(--p-typography-size-font-size24);
+  --s-typography-headline-h2line: var(--p-typography-line-height-line-height24);
+  --s-typography-paragraph-base-line: var(--p-typography-line-height-line-height16);
+  --s-typography-caption-caption-size: var(--p-typography-size-font-size12);
+  --s-typography-caption-caption-line: var(--p-typography-line-height-line-height12);
+  --s-typography-headline-h3size: var(--p-typography-size-font-size18);
+  --s-typography-headline-h3line: var(--p-typography-line-height-line-height18);
+  --s-typography-title-title-size: var(--p-typography-size-font-size18);
+  --s-typography-title-title-line: var(--p-typography-line-height-line-height18);
+  --s-typography-paragraph-small-size: var(--p-typography-size-font-size14);
+  --s-typography-paragraph-small-line: var(--p-typography-line-height-line-height14);
+  --s-typography-callout-callout-size: var(--p-typography-size-font-size20);
+  --s-typography-callout-callout-line: var(--p-typography-line-height-line-height20);
+  --s-grid-system-gutter: var(--p-spacing-space12);
+  --s-grid-system-margin: var(--p-spacing-space16);
+  --s-section-max-width: 600px;
   --s-section-to-section-gap: var(--p-spacing-space48);
   --s-section-to-subsection-gap: var(--p-spacing-space20);
   --s-section-to-title-gap: var(--p-spacing-space8);
   --s-section-columns: 2px;
-  --s-section-gutter: var(--p-spacing-space16);
+  --s-section-gutter: var(--p-spacing-space12);
   --s-button-to-hover-mark: var(--p-spacing-space4);
   --s-tag-radius: var(--p-raduis-radius-xs);
   --s-tag-horizontal-padding: var(--p-spacing-space12);
   --s-tag-vertical-padding: var(--p-spacing-space4);
-  --s-card-horizontal-padding: var(--p-spacing-space20);
-  --s-card-vertical-padding: var(--p-spacing-space20);
+  --s-card-horizontal-padding: var(--p-spacing-space16);
+  --s-card-vertical-padding: var(--p-spacing-space16);
   --s-card-radius: var(--p-raduis-radius-xl);
   --s-card-to-titlegap: var(--p-spacing-space8);
   --s-card-to-elementgap: var(--p-spacing-space12);
   --s-button-vertical-padding: var(--p-spacing-space8);
   --s-button-horizontal-pading: var(--p-spacing-space16);
   --s-button-radius: var(--p-raduis-radius-xs);
+  --s-grid-system-vertical-padding: var(--p-spacing-space24);
 }
 
-@media (max-width: 1279px) {
+@media (min-width: 1280px) {
   :root {
-    /* responsive tokens (SM overrides) */
-    --s-typography-headline-h1size: var(--p-typography-size-font-size32);
-    --s-grid-system-frame-min-width: 1px;
-    --s-grid-system-frame-max-width: 1279px;
-    --s-grid-system-columns: 4px;
-    --s-typography-paragraph-base-size: var(--p-typography-size-font-size16);
-    --s-typography-headline-h1line: var(--p-typography-line-height-line-height32);
-    --s-typography-headline-h2size: var(--p-typography-size-font-size24);
-    --s-typography-headline-h2line: var(--p-typography-line-height-line-height24);
-    --s-typography-paragraph-base-line: var(--p-typography-line-height-line-height16);
-    --s-typography-caption-caption-size: var(--p-typography-size-font-size12);
-    --s-typography-caption-caption-line: var(--p-typography-line-height-line-height12);
-    --s-typography-headline-h3size: var(--p-typography-size-font-size18);
-    --s-typography-headline-h3line: var(--p-typography-line-height-line-height18);
-    --s-typography-title-title-size: var(--p-typography-size-font-size18);
-    --s-typography-title-title-line: var(--p-typography-line-height-line-height18);
-    --s-typography-paragraph-small-size: var(--p-typography-size-font-size14);
-    --s-typography-paragraph-small-line: var(--p-typography-line-height-line-height14);
-    --s-typography-callout-callout-size: var(--p-typography-size-font-size20);
-    --s-typography-callout-callout-line: var(--p-typography-line-height-line-height20);
-    --s-grid-system-gutter: 0px;
-    --s-grid-system-margin: 0px;
-    --s-section-max-width: 600px;
-    --s-section-to-section-gap: 0px;
-    --s-section-to-subsection-gap: 0px;
-    --s-section-to-title-gap: 0px;
-    --s-section-columns: 0px;
-    --s-section-gutter: 0px;
-    --s-button-to-hover-mark: 0px;
-    --s-tag-radius: 0px;
-    --s-tag-horizontal-padding: 0px;
-    --s-tag-vertical-padding: 0px;
-    --s-card-horizontal-padding: 0px;
-    --s-card-vertical-padding: 0px;
-    --s-card-radius: 0px;
-    --s-card-to-titlegap: 0px;
-    --s-card-to-elementgap: 0px;
-    --s-button-vertical-padding: 0px;
-    --s-button-horizontal-pading: 0px;
-    --s-button-radius: 0px;
+    /* responsive tokens (XL overrides) */
+    --s-typography-headline-h1size: var(--p-typography-size-font-size48);
+    --s-grid-system-frame-min-width: 1440px;
+    --s-grid-system-frame-max-width: 9999px;
+    --s-grid-system-columns: 12px;
+    --s-typography-paragraph-base-size: var(--p-typography-size-font-size18);
+    --s-typography-headline-h1line: var(--p-typography-line-height-line-height48);
+    --s-typography-headline-h2size: var(--p-typography-size-font-size32);
+    --s-typography-headline-h2line: var(--p-typography-line-height-line-height32);
+    --s-typography-paragraph-base-line: var(--p-typography-line-height-line-height18);
+    --s-typography-caption-caption-size: var(--p-typography-size-font-size14);
+    --s-typography-caption-caption-line: var(--p-typography-line-height-line-height14);
+    --s-typography-headline-h3size: var(--p-typography-size-font-size20);
+    --s-typography-headline-h3line: var(--p-typography-line-height-line-height20);
+    --s-typography-title-title-size: var(--p-typography-size-font-size20);
+    --s-typography-title-title-line: var(--p-typography-line-height-line-height20);
+    --s-typography-paragraph-small-size: var(--p-typography-size-font-size16);
+    --s-typography-paragraph-small-line: var(--p-typography-line-height-line-height16);
+    --s-typography-callout-callout-size: var(--p-typography-size-font-size24);
+    --s-typography-callout-callout-line: var(--p-typography-line-height-line-height24);
+    --s-grid-system-gutter: var(--p-spacing-space16);
+    --s-grid-system-margin: var(--p-spacing-space44);
+    --s-section-max-width: 800px;
+    --s-section-to-section-gap: var(--p-spacing-space48);
+    --s-section-to-subsection-gap: var(--p-spacing-space20);
+    --s-section-to-title-gap: var(--p-spacing-space8);
+    --s-section-columns: 2px;
+    --s-section-gutter: var(--p-spacing-space16);
+    --s-button-to-hover-mark: var(--p-spacing-space4);
+    --s-tag-radius: var(--p-raduis-radius-xs);
+    --s-tag-horizontal-padding: var(--p-spacing-space12);
+    --s-tag-vertical-padding: var(--p-spacing-space4);
+    --s-card-horizontal-padding: var(--p-spacing-space20);
+    --s-card-vertical-padding: var(--p-spacing-space20);
+    --s-card-radius: var(--p-raduis-radius-xl);
+    --s-card-to-titlegap: var(--p-spacing-space8);
+    --s-card-to-elementgap: var(--p-spacing-space12);
+    --s-button-vertical-padding: var(--p-spacing-space8);
+    --s-button-horizontal-pading: var(--p-spacing-space16);
+    --s-button-radius: var(--p-raduis-radius-xs);
+    --s-grid-system-vertical-padding: var(--p-spacing-space48);
   }
 }
-

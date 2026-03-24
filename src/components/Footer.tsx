@@ -21,7 +21,7 @@ export function Footer({
       )}
       data-name="Footer"
     >
-      <div className="mx-auto flex w-full max-w-[1440px] items-center justify-between text-[length:var(--s-typography-caption-caption-size)] font-normal leading-[var(--s-typography-caption-caption-line)]">
+      <div className="flex w-full items-center justify-between text-[length:var(--s-typography-caption-caption-size)] font-normal leading-[var(--s-typography-caption-caption-line)]">
         <div>{name}</div>
         <div>{year}</div>
       </div>

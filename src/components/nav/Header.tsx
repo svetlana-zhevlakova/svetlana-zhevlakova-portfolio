@@ -1,6 +1,5 @@
-import Link from "next/link";
-
 import { Button } from "@/components/Button";
+import { LogoButton } from "@/components/LogoButton";
 
 type NavItem = {
   label: string;
@@ -8,7 +7,7 @@ type NavItem = {
   external?: boolean;
 };
 
-export type TopNavigationProps = {
+export type HeaderProps = {
   className?: string;
   items?: NavItem[];
   ctaHref?: string;
@@ -32,29 +31,20 @@ const defaultItems: NavItem[] = [
   }
 ];
 
-export function TopNavigation({
+export function Header({
   className,
   items = defaultItems,
   ctaHref = "mailto:zhevlakova.design@gmail.com"
-}: TopNavigationProps) {
+}: HeaderProps) {
   return (
     <header
-      className={cx(
-        "w-full px-[var(--s-grid-system-margin)] py-5",
-        className
-      )}
-      data-name="Top navigation"
+      className={cx("w-full px-[var(--s-grid-system-margin)] py-5", className)}
+      data-name="Header"
     >
-      <div className="mx-auto flex w-full max-w-[1440px] items-center justify-between">
-        <Link
-          href="/"
-          className="w-[41px] text-[36px] font-light leading-none text-[var(--s-button-link-default-text)]"
-          aria-label="Home"
-        >
-          SZ
-        </Link>
+      <div className="flex w-full items-center justify-between">
+        <LogoButton href="/" aria-label="Home" />
 
-        <nav className="flex items-center gap-10">
+        <nav className="flex items-center gap-10" aria-label="Primary">
           {items.map((item) => (
             <Button
               key={item.href}
@@ -74,4 +64,3 @@ export function TopNavigation({
     </header>
   );
 }
-
