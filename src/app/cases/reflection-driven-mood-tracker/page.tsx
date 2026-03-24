@@ -116,7 +116,29 @@ export default function ReflectionDrivenMoodTrackerCasePage() {
           />
           <Body
             variant="text"
-            text="To make AI-generated reflections genuinely valuable, I defined a conceptual evaluation framework focused on output quality rather than technical metrics. I identified four dimensions critical to user trust and engagement: relevance, emotional appropriateness, novelty, and subtle actionability. This framework guided design decisions around prompt structure, personalization, and dashboard presentation. It allowed us to reason about AI behavior, anticipate low-value outputs, and ensure the system could support long-term engagement."
+            text={
+              <>
+                <p>
+                  To make AI-generated reflections genuinely valuable, I defined a conceptual
+                  evaluation framework focused on output quality rather than technical metrics. I
+                  identified four dimensions critical to user trust and engagement:
+                </p>
+                <ul>
+                  <li>Relevance: Aligns with the user&apos;s actual mood and context</li>
+                  <li>
+                    Emotional appropriateness: Responds sensitively without invalidating feelings
+                  </li>
+                  <li>Novelty: Avoids repetition and fatigue across entries</li>
+                  <li>Subtle actionability: Suggests reflection without pressure</li>
+                </ul>
+                <p>
+                  This framework guided design decisions around prompt structure, personalization,
+                  and dashboard presentation. It allowed us to reason about AI behavior, anticipate
+                  low-value outputs, and ensure the system could support long-term engagement even
+                  without live testing.
+                </p>
+              </>
+            }
           />
         </section>
 

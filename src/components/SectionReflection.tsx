@@ -8,7 +8,7 @@ type ReflectionItem = {
 };
 
 export type SectionReflectionProps = {
-  amount?: 3 | 4;
+  amount?: 2 | 3 | 4;
   title?: React.ReactNode;
   items?: ReflectionItem[];
   className?: string;
@@ -31,8 +31,9 @@ export function SectionReflection({
   items = fallbackItems,
   className
 }: SectionReflectionProps) {
-  const visibleItems = items.slice(0, Math.max(3, Math.min(amount, 4)));
-  const isThree = amount === 3;
+  const clampedAmount = Math.max(2, Math.min(amount, 4));
+  const visibleItems = items.slice(0, clampedAmount);
+  const isThree = clampedAmount === 3;
 
   return (
     <section

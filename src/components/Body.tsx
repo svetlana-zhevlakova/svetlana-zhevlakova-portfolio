@@ -73,11 +73,19 @@ export function Body({
     );
   }
 
+  const isPlainText = typeof resolvedText === "string" || typeof resolvedText === "number";
+
   return (
     <div className={cx("w-[800px] max-w-full", className)}>
-      <p className="w-full text-[length:var(--s-typography-paragraph-base-size)] font-normal leading-[var(--s-typography-paragraph-base-line)] text-[var(--s-section-text)]">
-        {resolvedText}
-      </p>
+      {isPlainText ? (
+        <p className="w-full text-[length:var(--s-typography-paragraph-base-size)] font-normal leading-[var(--s-typography-paragraph-base-line)] text-[var(--s-section-text)]">
+          {resolvedText}
+        </p>
+      ) : (
+        <div className="w-full space-y-4 text-[length:var(--s-typography-paragraph-base-size)] font-normal leading-[var(--s-typography-paragraph-base-line)] text-[var(--s-section-text)] [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-6">
+          {resolvedText}
+        </div>
+      )}
     </div>
   );
 }

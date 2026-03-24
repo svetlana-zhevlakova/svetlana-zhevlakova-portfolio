@@ -113,7 +113,7 @@ export default function LeadershipAndCultureCasePage() {
         </section>
 
         <SectionReflection
-          amount={4}
+          amount={2}
           items={[
             {
               title: "Design Strategy & Business Connection",
