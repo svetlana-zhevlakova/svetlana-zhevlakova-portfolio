@@ -26,3 +26,7 @@ dist
 .vscode
 .idea
 
+# local design/context exports
+context/
+from-figma/
+
