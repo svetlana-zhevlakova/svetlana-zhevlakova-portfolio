@@ -44,7 +44,7 @@ export default function AboutPage() {
               />
               <AboutBlock
                 title="Team & Culture Leader"
-                body="I mentored a junior designer toward system-level thinking through structured critiques and pair design. I\u00A0led hiring, introduced a skill framework, and aligned design with product and business strategy."
+                body="I mentored a junior designer toward system-level thinking through structured critiques and pair design. I led hiring, introduced a skill framework, and aligned design with product and business strategy."
               />
             </div>
           </div>
