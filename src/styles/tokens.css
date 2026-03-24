@@ -132,6 +132,8 @@
   --s-section-to-title-gap: var(--p-spacing-space8);
   --s-section-columns: 2px;
   --s-section-gutter: var(--p-spacing-space12);
+  --s-media-section-radius: var(--p-raduis-radius-xl);
+  --s-media-section-image-radius: var(--p-raduis-radius-xs);
   --s-button-to-hover-mark: var(--p-spacing-space4);
   --s-tag-radius: var(--p-raduis-radius-xs);
   --s-tag-horizontal-padding: var(--p-spacing-space12);
@@ -177,6 +179,8 @@
     --s-section-to-title-gap: var(--p-spacing-space8);
     --s-section-columns: 2px;
     --s-section-gutter: var(--p-spacing-space16);
+    --s-media-section-radius: var(--p-raduis-radius-xs);
+    --s-media-section-image-radius: var(--p-raduis-radius-xs);
     --s-button-to-hover-mark: var(--p-spacing-space4);
     --s-tag-radius: var(--p-raduis-radius-xs);
     --s-tag-horizontal-padding: var(--p-spacing-space12);
