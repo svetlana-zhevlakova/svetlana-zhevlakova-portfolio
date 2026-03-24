@@ -6,7 +6,11 @@ import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Portfolio",
-  description: "Personal portfolio website"
+  description: "Personal portfolio website",
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg"
+  }
 };
 
 const overusedGrotesk = localFont({

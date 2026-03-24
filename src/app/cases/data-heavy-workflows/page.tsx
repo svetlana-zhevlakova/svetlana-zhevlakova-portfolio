@@ -45,7 +45,7 @@ export default function DataHeavyWorkflowsCasePage() {
           />
         </section>
 
-        <section className="w-full max-w-[1352px] overflow-hidden rounded-[var(--s-card-radius)] bg-[var(--s-media-section-background)] p-3">
+        <section className="h-[858px] w-full max-w-[1352px] overflow-hidden rounded-[var(--s-card-radius)] bg-[var(--s-media-section-background)] p-3 max-[1400px]:h-auto">
           <div className="grid w-full grid-cols-2 gap-3 max-[1100px]:grid-cols-2 max-[700px]:grid-cols-1">
             <HeroImage src={HERO_1_SRC} alt="Data-heavy workflows hero image one" />
             <HeroImage src={HERO_2_SRC} alt="Data-heavy workflows hero image two" />
@@ -295,12 +295,12 @@ type HeroImageProps = {
 
 function HeroImage({ src, alt }: HeroImageProps) {
   return (
-    <div className="relative h-[320px] overflow-hidden rounded-[var(--s-media-section-image-radius)] max-[1100px]:h-[280px] max-[700px]:h-[240px]">
+    <div className="relative h-[411px] overflow-hidden rounded-[var(--s-media-section-image-radius)] max-[1100px]:h-[320px] max-[700px]:h-[240px]">
       <Image
         src={src}
         alt={alt}
         fill
-        sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 25vw"
+        sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 658px"
         className="rounded-[var(--s-media-section-image-radius)] object-cover"
       />
     </div>
