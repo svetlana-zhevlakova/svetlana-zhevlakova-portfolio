@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import Script from "next/script";
 import "./globals.css";
+import { CookieConsentBanner } from "@/components/CookieConsentBanner";
 import { Header } from "@/components/nav/Header";
 import { Footer } from "@/components/Footer";
 
@@ -44,30 +44,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme="light" className={overusedGrotesk.variable}>
-      <head>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-3DRE6NK9YZ"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-3DRE6NK9YZ');
-          `}
-        </Script>
-        <Script
-          src="https://t.contentsquare.net/uxa/9396a242225f6.js"
-          strategy="afterInteractive"
-        />
-      </head>
+      <head />
       <body
         className={`${overusedGrotesk.className} flex min-h-dvh flex-col bg-[var(--s-page-background)]`}
       >
         <Header />
         <div className="flex flex-1 flex-col">{children}</div>
         <Footer />
+        <CookieConsentBanner />
       </body>
     </html>
   );

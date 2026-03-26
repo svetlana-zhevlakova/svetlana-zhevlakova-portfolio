@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export type FooterProps = {
   className?: string;
   name?: string;
@@ -22,8 +24,15 @@ export function Footer({
       data-name="Footer"
     >
       <div className="flex w-full items-center justify-between text-[length:var(--s-typography-caption-caption-size)] font-normal leading-[var(--s-typography-caption-caption-line)]">
-        <div>{name}</div>
-        <div>{year}</div>
+        <div>
+          {name}, {year}
+        </div>
+        <Link
+          href="/privacy-policy"
+          className="underline decoration-[var(--s-button-link-hover-border)] underline-offset-2"
+        >
+          Privacy Policy
+        </Link>
       </div>
     </footer>
   );
