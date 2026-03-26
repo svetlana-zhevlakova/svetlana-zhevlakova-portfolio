@@ -57,6 +57,10 @@ export default function RootLayout({
             gtag('config', 'G-3DRE6NK9YZ');
           `}
         </Script>
+        <Script
+          src="https://t.contentsquare.net/uxa/9396a242225f6.js"
+          strategy="afterInteractive"
+        />
       </head>
       <body
         className={`${overusedGrotesk.className} flex min-h-dvh flex-col bg-[var(--s-page-background)]`}
