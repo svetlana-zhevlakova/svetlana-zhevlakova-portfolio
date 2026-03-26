@@ -6,7 +6,7 @@ export default function PrivacyPolicyPage() {
           Privacy Policy
         </h1>
         <p className="text-[length:var(--s-typography-paragraph-base-size)] font-normal leading-[var(--s-typography-paragraph-base-line)]">
-          This portfolio website uses Google Analytics and Hotjar to understand visitor
+          This website uses Google Analytics and Hotjar to understand visitor
           interactions and improve the website experience. These tools collect data such as page
           views, clicks, and device information. No personal data like name, email, or address is
           collected automatically. IP addresses are anonymized. Data is used for analytics purposes
