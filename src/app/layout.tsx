@@ -49,6 +49,7 @@ export default function RootLayout({
         className={`${overusedGrotesk.className} flex min-h-dvh flex-col bg-[var(--s-page-background)]`}
       >
         <Header />
+        <div aria-hidden="true" className="h-[92px] shrink-0" />
         <div className="flex flex-1 flex-col">{children}</div>
         <Footer />
         <CookieConsentBanner />

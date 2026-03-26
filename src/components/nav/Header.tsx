@@ -58,7 +58,10 @@ export function Header({
 }: HeaderProps) {
   return (
     <header
-      className={cx("w-full px-[var(--s-grid-system-margin)] py-5", className)}
+      className={cx(
+        "fixed inset-x-0 top-0 z-50 w-full bg-[rgba(255,255,255,0.78)] px-[var(--s-grid-system-margin)] py-5 backdrop-blur-md",
+        className
+      )}
       data-name="Header"
     >
       <div className="flex w-full items-center justify-between">
