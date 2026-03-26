@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 const STORAGE_KEY = "cookie-consent";
 const ACCEPTED = "accepted";
 const REJECTED = "rejected";
+const IS_PRODUCTION = process.env.NODE_ENV === "production";
 
 export function CookieConsentBanner() {
   const [consent, setConsent] = useState<string | null>(null);
@@ -25,8 +26,9 @@ export function CookieConsentBanner() {
     setConsent(REJECTED);
   };
 
-  const shouldShowBanner = consent !== ACCEPTED && consent !== REJECTED;
-  const shouldLoadTrackingScripts = consent === ACCEPTED;
+  const shouldShowBanner =
+    IS_PRODUCTION && consent !== ACCEPTED && consent !== REJECTED;
+  const shouldLoadTrackingScripts = IS_PRODUCTION && consent === ACCEPTED;
 
   return (
     <>
