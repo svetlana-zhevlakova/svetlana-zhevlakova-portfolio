@@ -31,6 +31,24 @@ const defaultItems: NavItem[] = [
   }
 ];
 
+function trackHeaderClick(label: string, destination: string) {
+  if (typeof window === "undefined") return;
+
+  const gtag = (window as Window & {
+    gtag?: (
+      command: "event",
+      action: string,
+      params?: Record<string, string>
+    ) => void;
+  }).gtag;
+
+  gtag?.("event", "header_click", {
+    event_category: "navigation",
+    event_label: label,
+    destination_url: destination
+  });
+}
+
 export function Header({
   className,
   items = defaultItems,
@@ -52,11 +70,20 @@ export function Header({
               href={item.href}
               target={item.external ? "_blank" : undefined}
               rel={item.external ? "noreferrer noopener" : undefined}
+              onClick={
+                item.label === "Resume" || item.label === "LinkedIn"
+                  ? () => trackHeaderClick(item.label, item.href)
+                  : undefined
+              }
             >
               {item.label}
             </Button>
           ))}
-          <Button variant="primary" href={ctaHref}>
+          <Button
+            variant="primary"
+            href={ctaHref}
+            onClick={() => trackHeaderClick("Contact me", ctaHref)}
+          >
             Contact me
           </Button>
         </nav>
