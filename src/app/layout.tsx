@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Script from "next/script";
 import "./globals.css";
 import { Header } from "@/components/nav/Header";
 import { Footer } from "@/components/Footer";
@@ -43,6 +44,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme="light" className={overusedGrotesk.variable}>
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-3DRE6NK9YZ"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-3DRE6NK9YZ');
+          `}
+        </Script>
+      </head>
       <body
         className={`${overusedGrotesk.className} flex min-h-dvh flex-col bg-[var(--s-page-background)]`}
       >
