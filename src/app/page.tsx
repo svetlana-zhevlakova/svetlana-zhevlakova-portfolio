@@ -5,7 +5,7 @@ export default function HomePage() {
     <main className="flex w-full flex-1 bg-[var(--s-page-background)]">
       <div className="flex w-full flex-1 px-[var(--s-grid-system-margin)] py-10">
         <div className="flex w-full flex-1 items-stretch gap-[var(--s-section-to-section-gap)] max-[1200px]:flex-col">
-          <section className="flex min-w-0 basis-[408px] grow flex-col gap-[var(--s-section-to-title-gap)] max-w-[800px] text-[var(--s-section-text)]">
+          <section className="flex min-w-0 basis-auto grow flex-col gap-[var(--s-section-to-title-gap)] max-w-[800px] text-[var(--s-section-text)] min-[1200px]:basis-[408px]">
             <h1 className="text-[length:var(--s-typography-headline-h1size)] font-normal leading-[var(--s-typography-headline-h1line)]">
               Hey, I’m Svetlana.
             </h1>
