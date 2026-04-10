@@ -52,7 +52,7 @@ export function IconButton({
     <button
       type={type}
       className={cx(
-        "inline-flex h-[44px] items-center justify-center rounded-[var(--s-button-radius)] px-[var(--s-button-horizontal-pading)] py-[var(--s-button-vertical-padding)]",
+        "inline-flex h-[44px] items-center justify-center rounded-[var(--s-button-radius)] px-[var(--s-button-horizontal-padding)] py-[var(--s-button-vertical-padding)]",
         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--p-info-color-focus-ring-default)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--s-page-background)]",
         className
       )}

@@ -5,19 +5,29 @@ import { Body } from "@/components/Body";
 import { CaseHeader } from "@/components/CaseHeader";
 import { SectionReflection } from "@/components/SectionReflection";
 import { BackNavigation } from "@/components/case/BackNavigation";
+import { CaseTableOfContents } from "@/components/case/CaseTableOfContents";
 import { NextCaseNavigation } from "@/components/case/NextCaseNavigation";
 
 const currentCase = CASES[3];
 const nextCase = CASES[0];
 const HERO_1_SRC = "/cases/leadership-and-culture/hero-1.png";
+const TOC_ITEMS = [
+  { id: "overview", label: "Overview" },
+  { id: "problem-framing", label: "Problem framing" },
+  { id: "strategy", label: "Strategy" },
+  { id: "key-actions", label: "Key actions" },
+  { id: "outcome", label: "Outcome" },
+  { id: "reflections-and-learnings", label: "Learnings" }
+];
 
 export default function LeadershipAndCultureCasePage() {
   return (
     <main className="w-full bg-[var(--s-page-background)]">
+      <CaseTableOfContents items={TOC_ITEMS} />
       <div className="flex w-full flex-col items-center gap-[var(--s-section-to-section-gap)] px-[var(--s-grid-system-margin)] py-[var(--s-grid-system-vertical-padding)]">
         <BackNavigation />
 
-        <section className="flex w-full max-w-[800px] flex-col gap-[var(--s-section-to-subsection-gap)]">
+        <section id="overview" className="flex w-full max-w-[800px] scroll-mt-[120px] flex-col gap-[var(--s-section-to-subsection-gap)]">
           <CaseHeader
             variant="h1"
             title="Establishing Design Function & Mentorship in a Service Company"
@@ -37,7 +47,10 @@ export default function LeadershipAndCultureCasePage() {
           />
         </section>
 
-        <section className="h-[547px] w-full max-w-[1352px] overflow-hidden rounded-[var(--s-card-radius)] bg-[var(--s-media-section-background)] p-3 max-[1400px]:h-auto">
+        <section
+          data-toc-contrast-zone="true"
+          className="h-[547px] w-full max-w-[1352px] overflow-hidden rounded-[var(--s-card-radius)] bg-[var(--s-media-section-background)] p-3 max-[1400px]:h-auto"
+        >
           <div className="relative h-[523px] w-full overflow-hidden rounded-[var(--s-media-section-image-radius)] max-[1400px]:h-[360px] max-[900px]:h-[260px]">
             <Image
               src={HERO_1_SRC}
@@ -49,7 +62,7 @@ export default function LeadershipAndCultureCasePage() {
           </div>
         </section>
 
-        <section className="flex w-full max-w-[800px] flex-col gap-[var(--s-section-to-subsection-gap)]">
+        <section id="problem-framing" className="flex w-full max-w-[800px] scroll-mt-[120px] flex-col gap-[var(--s-section-to-subsection-gap)]">
           <CaseHeader
             variant="h2"
             title="No Framework for Design in the Company"
@@ -61,7 +74,7 @@ export default function LeadershipAndCultureCasePage() {
           />
         </section>
 
-        <section className="flex w-full max-w-[800px] flex-col gap-[var(--s-section-to-subsection-gap)]">
+        <section id="strategy" className="flex w-full max-w-[800px] scroll-mt-[120px] flex-col gap-[var(--s-section-to-subsection-gap)]">
           <CaseHeader
             variant="h2"
             title="Strategy vs Tactics: Shaping a Sustainable Design Function"
@@ -73,7 +86,7 @@ export default function LeadershipAndCultureCasePage() {
           />
         </section>
 
-        <section className="flex w-full max-w-[800px] flex-col gap-[var(--s-section-to-subsection-gap)]">
+        <section id="key-actions" className="flex w-full max-w-[800px] scroll-mt-[120px] flex-col gap-[var(--s-section-to-subsection-gap)]">
           <CaseHeader
             variant="h2"
             title="Collaborating With People To Drive Culture And Processes"
@@ -100,7 +113,7 @@ export default function LeadershipAndCultureCasePage() {
           />
         </section>
 
-        <section className="flex w-full max-w-[800px] flex-col gap-[var(--s-section-to-subsection-gap)]">
+        <section id="outcome" className="flex w-full max-w-[800px] scroll-mt-[120px] flex-col gap-[var(--s-section-to-subsection-gap)]">
           <CaseHeader
             variant="h2"
             title="From Zero To Functioning Design Discipline"
@@ -112,6 +125,7 @@ export default function LeadershipAndCultureCasePage() {
           />
         </section>
 
+        <div id="reflections-and-learnings" className="w-full max-w-[800px] scroll-mt-[120px]">
         <SectionReflection
           amount={2}
           items={[
@@ -137,6 +151,7 @@ export default function LeadershipAndCultureCasePage() {
             }
           ]}
         />
+        </div>
 
         <NextCaseNavigation
           title={nextCase.title}

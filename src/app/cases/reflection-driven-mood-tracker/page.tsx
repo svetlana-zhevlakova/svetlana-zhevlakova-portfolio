@@ -5,6 +5,7 @@ import { Body } from "@/components/Body";
 import { CaseHeader } from "@/components/CaseHeader";
 import { SectionReflection } from "@/components/SectionReflection";
 import { BackNavigation } from "@/components/case/BackNavigation";
+import { CaseTableOfContents } from "@/components/case/CaseTableOfContents";
 import { NextCaseNavigation } from "@/components/case/NextCaseNavigation";
 import { ScrollAutoplayVideo } from "@/components/case/ScrollAutoplayVideo";
 
@@ -15,14 +16,24 @@ const HERO_2_SRC = "/cases/reflection-driven-mood-tracker/hero-2.png";
 const HERO_3_SRC = "/cases/reflection-driven-mood-tracker/hero-3.png";
 const CORE_LOOP_VIDEO_SRC = "/cases/reflection-driven-mood-tracker/core-loop-flow.mov";
 const CORE_LOOP_VIDEO_FALLBACK_SRC = "/cases/reflection-driven-mood-tracker/core-loop-flow.mp4";
+const TOC_ITEMS = [
+  { id: "overview", label: "Overview" },
+  { id: "problem-framing", label: "Problem framing" },
+  { id: "design-strategy", label: "Design strategy" },
+  { id: "key-flow", label: "Flow: Check-in to Insight" },
+  { id: "design-evaluation", label: "Design evaluation" },
+  { id: "outcome", label: "Outcome" },
+  { id: "reflections-and-learnings", label: "Learnings" }
+];
 
 export default function ReflectionDrivenMoodTrackerCasePage() {
   return (
     <main className="w-full bg-[var(--s-page-background)]">
+      <CaseTableOfContents items={TOC_ITEMS} />
       <div className="flex w-full flex-col items-center gap-[var(--s-section-to-section-gap)] px-[var(--s-grid-system-margin)] py-[var(--s-grid-system-vertical-padding)]">
         <BackNavigation />
 
-        <section className="flex w-full max-w-[800px] flex-col gap-[var(--s-section-to-subsection-gap)]">
+        <section id="overview" className="flex w-full max-w-[800px] scroll-mt-[120px] flex-col gap-[var(--s-section-to-subsection-gap)]">
           <CaseHeader
             variant="h1"
             title={currentCase.title}
@@ -40,7 +51,10 @@ export default function ReflectionDrivenMoodTrackerCasePage() {
           />
         </section>
 
-        <section className="h-[600px] w-full max-w-[1307px] overflow-hidden rounded-[var(--s-card-radius)] bg-[var(--s-media-section-background)] p-3 max-[1200px]:h-auto">
+        <section
+          data-toc-contrast-zone="true"
+          className="h-[600px] w-full max-w-[1307px] overflow-hidden rounded-[var(--s-card-radius)] bg-[var(--s-media-section-background)] p-3 max-[1200px]:h-auto"
+        >
           <div className="grid h-full w-full grid-cols-[334px_394px_531px] gap-3 max-[1200px]:grid-cols-1">
             <div className="relative h-[366px] min-h-[240px] overflow-hidden rounded-[var(--s-media-section-image-radius)] max-[1200px]:h-full">
               <Image
@@ -72,7 +86,7 @@ export default function ReflectionDrivenMoodTrackerCasePage() {
           </div>
         </section>
 
-        <section className="flex w-full max-w-[800px] flex-col gap-[var(--s-section-to-subsection-gap)]">
+        <section id="problem-framing" className="flex w-full max-w-[800px] scroll-mt-[120px] flex-col gap-[var(--s-section-to-subsection-gap)]">
           <CaseHeader variant="h2" title="When Tracking Feels Pointless, Users Leave" tags={["Problem framing"]} />
           <Body
             variant="text"
@@ -80,7 +94,7 @@ export default function ReflectionDrivenMoodTrackerCasePage() {
           />
         </section>
 
-        <section className="flex w-full max-w-[800px] flex-col gap-[var(--s-section-to-subsection-gap)]">
+        <section id="design-strategy" className="flex w-full max-w-[800px] scroll-mt-[120px] flex-col gap-[var(--s-section-to-subsection-gap)]">
           <CaseHeader variant="h2" title="Designing For Reflection, Not Just Logging" tags={["Design strategy"]} />
           <Body
             variant="text"
@@ -88,7 +102,7 @@ export default function ReflectionDrivenMoodTrackerCasePage() {
           />
         </section>
 
-        <section className="flex w-full max-w-[800px] flex-col gap-[var(--s-section-to-subsection-gap)]">
+        <section id="key-flow" className="flex w-full max-w-[800px] scroll-mt-[120px] flex-col gap-[var(--s-section-to-subsection-gap)]">
           <CaseHeader variant="h2" title="Core Loop For Reflection And Insight" tags={["Key flow"]} />
           <Body
             variant="text"
@@ -108,7 +122,7 @@ export default function ReflectionDrivenMoodTrackerCasePage() {
           </div>
         </section>
 
-        <section className="flex w-full max-w-[800px] flex-col gap-[var(--s-section-to-subsection-gap)]">
+        <section id="design-evaluation" className="flex w-full max-w-[800px] scroll-mt-[120px] flex-col gap-[var(--s-section-to-subsection-gap)]">
           <CaseHeader
             variant="h2"
             title="LLM Evaluation Framework For Meaningful Feedback"
@@ -142,7 +156,7 @@ export default function ReflectionDrivenMoodTrackerCasePage() {
           />
         </section>
 
-        <section className="flex w-full max-w-[800px] flex-col gap-[var(--s-section-to-subsection-gap)]">
+        <section id="outcome" className="flex w-full max-w-[800px] scroll-mt-[120px] flex-col gap-[var(--s-section-to-subsection-gap)]">
           <CaseHeader
             variant="h2"
             title="Insights-Driven Redesign To Boost Engagement"
@@ -154,6 +168,7 @@ export default function ReflectionDrivenMoodTrackerCasePage() {
           />
         </section>
 
+        <div id="reflections-and-learnings" className="w-full max-w-[800px] scroll-mt-[120px]">
         <SectionReflection
           amount={4}
           items={[
@@ -178,6 +193,7 @@ export default function ReflectionDrivenMoodTrackerCasePage() {
             }
           ]}
         />
+        </div>
 
         <NextCaseNavigation
           title={nextCase.title}

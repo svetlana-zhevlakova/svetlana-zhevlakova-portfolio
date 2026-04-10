@@ -68,14 +68,14 @@ export function CookieConsentBanner() {
               <button
                 type="button"
                 onClick={handleReject}
-                className="rounded-[var(--s-button-radius)] border border-[var(--s-media-section-border)] px-[var(--s-button-horizontal-pading)] py-[var(--s-button-vertical-padding)] text-[length:var(--s-typography-paragraph-base-size)] leading-[var(--s-typography-paragraph-base-line)] text-[var(--s-section-text)]"
+                className="rounded-[var(--s-button-radius)] border border-[var(--s-media-section-border)] px-[var(--s-button-horizontal-padding)] py-[var(--s-button-vertical-padding)] text-[length:var(--s-typography-paragraph-base-size)] leading-[var(--s-typography-paragraph-base-line)] text-[var(--s-section-text)]"
               >
                 Reject
               </button>
               <button
                 type="button"
                 onClick={handleAccept}
-                className="rounded-[var(--s-button-radius)] bg-[var(--s-button-primary-default-background)] px-[var(--s-button-horizontal-pading)] py-[var(--s-button-vertical-padding)] text-[length:var(--s-typography-paragraph-base-size)] leading-[var(--s-typography-paragraph-base-line)] text-[var(--s-button-primary-default-text)]"
+                className="rounded-[var(--s-button-radius)] bg-[var(--s-button-primary-default-background)] px-[var(--s-button-horizontal-padding)] py-[var(--s-button-vertical-padding)] text-[length:var(--s-typography-paragraph-base-size)] leading-[var(--s-typography-paragraph-base-line)] text-[var(--s-button-primary-default-text)]"
               >
                 Accept
               </button>

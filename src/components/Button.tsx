@@ -42,7 +42,7 @@ const variants: Record<
 > = {
   primary: {
     wrapper:
-      "justify-center rounded-[var(--s-button-radius)] bg-[var(--s-button-primary-default-background)] px-[var(--s-button-horizontal-pading)] hover:bg-[var(--s-button-primary-hover-background)]",
+      "justify-center rounded-[var(--s-button-radius)] bg-[var(--s-button-primary-default-background)] px-[var(--s-button-horizontal-padding)] hover:bg-[var(--s-button-primary-hover-background)]",
     content:
       "gap-[0px] text-[color:var(--s-button-primary-default-text)] group-hover:text-[color:var(--s-button-primary-hover-text)]",
     underline: false

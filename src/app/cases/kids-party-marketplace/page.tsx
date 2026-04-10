@@ -5,6 +5,7 @@ import { Body } from "@/components/Body";
 import { CaseHeader } from "@/components/CaseHeader";
 import { SectionReflection } from "@/components/SectionReflection";
 import { BackNavigation } from "@/components/case/BackNavigation";
+import { CaseTableOfContents } from "@/components/case/CaseTableOfContents";
 import { NextCaseNavigation } from "@/components/case/NextCaseNavigation";
 import { ScrollAutoplayVideo } from "@/components/case/ScrollAutoplayVideo";
 
@@ -17,14 +18,24 @@ const MOBILE_FLOW_VIDEO_SRC = "/cases/kids-party-marketplace/mobile-flow.mov";
 const MOBILE_FLOW_VIDEO_FALLBACK_SRC = "/cases/kids-party-marketplace/mobile-flow.mp4";
 const ADMIN_CALENDAR_1_SRC = "/cases/kids-party-marketplace/admin-calendar-1.png";
 const ADMIN_CALENDAR_2_SRC = "/cases/kids-party-marketplace/admin-calendar-2.png";
+const TOC_ITEMS = [
+  { id: "overview", label: "Overview" },
+  { id: "problem-framing", label: "Problem framing" },
+  { id: "design-strategy", label: "Design strategy" },
+  { id: "key-flow-1", label: "Flow: Booking" },
+  { id: "key-flow-2", label: "Flow: Admin calendar" },
+  { id: "outcome", label: "Outcome" },
+  { id: "reflections-and-learnings", label: "Learnings" }
+];
 
 export default function KidsPartyMarketplaceCasePage() {
   return (
     <main className="w-full bg-[var(--s-page-background)]">
+      <CaseTableOfContents items={TOC_ITEMS} />
       <div className="flex w-full flex-col items-center gap-[var(--s-section-to-section-gap)] px-[var(--s-grid-system-margin)] py-[var(--s-grid-system-vertical-padding)]">
         <BackNavigation />
 
-        <section className="flex w-full max-w-[800px] flex-col gap-[var(--s-section-to-subsection-gap)]">
+        <section id="overview" className="flex w-full max-w-[800px] scroll-mt-[120px] flex-col gap-[var(--s-section-to-subsection-gap)]">
           <CaseHeader
             variant="h1"
             title={currentCase.title}
@@ -42,7 +53,10 @@ export default function KidsPartyMarketplaceCasePage() {
           />
         </section>
 
-        <section className="h-[600px] w-full max-w-[1301px] overflow-hidden rounded-[var(--s-card-radius)] bg-[var(--s-media-section-background)] p-3 max-[1200px]:h-auto">
+        <section
+          data-toc-contrast-zone="true"
+          className="h-[600px] w-full max-w-[1301px] overflow-hidden rounded-[var(--s-card-radius)] bg-[var(--s-media-section-background)] p-3 max-[1200px]:h-auto"
+        >
           <div className="grid h-full w-full grid-cols-[721px_266px_266px] gap-3 max-[1200px]:grid-cols-1">
             <div className="relative h-full min-h-[240px] overflow-hidden rounded-[var(--s-media-section-image-radius)]">
               <Image
@@ -74,7 +88,7 @@ export default function KidsPartyMarketplaceCasePage() {
           </div>
         </section>
 
-        <section className="flex w-full max-w-[800px] flex-col gap-[var(--s-section-to-subsection-gap)]">
+        <section id="problem-framing" className="flex w-full max-w-[800px] scroll-mt-[120px] flex-col gap-[var(--s-section-to-subsection-gap)]">
           <CaseHeader variant="h2" title="An Entire Market With No Product" tags={["Problem framing"]} />
           <Body
             variant="text"
@@ -82,7 +96,7 @@ export default function KidsPartyMarketplaceCasePage() {
           />
         </section>
 
-        <section className="flex w-full max-w-[800px] flex-col gap-[var(--s-section-to-subsection-gap)]">
+        <section id="design-strategy" className="flex w-full max-w-[800px] scroll-mt-[120px] flex-col gap-[var(--s-section-to-subsection-gap)]">
           <CaseHeader
             variant="h2"
             title="Designing For Validated Bookings, Not A Full Marketplace"
@@ -94,7 +108,7 @@ export default function KidsPartyMarketplaceCasePage() {
           />
         </section>
 
-        <section className="flex w-full max-w-[800px] flex-col gap-[var(--s-section-to-subsection-gap)]">
+        <section id="key-flow-1" className="flex w-full max-w-[800px] scroll-mt-[120px] flex-col gap-[var(--s-section-to-subsection-gap)]">
           <CaseHeader variant="h2" title="Mobile Booking Flow" tags={["Key flow"]} />
           <Body
             variant="text"
@@ -114,7 +128,7 @@ export default function KidsPartyMarketplaceCasePage() {
           </div>
         </section>
 
-        <section className="flex w-full max-w-[800px] flex-col gap-[var(--s-section-to-subsection-gap)]">
+        <section id="key-flow-2" className="flex w-full max-w-[800px] scroll-mt-[120px] flex-col gap-[var(--s-section-to-subsection-gap)]">
           <CaseHeader variant="h2" title="Admin Calendar & Booking Management" tags={["Key flow"]} />
           <Body
             variant="text"
@@ -142,7 +156,7 @@ export default function KidsPartyMarketplaceCasePage() {
           </div>
         </section>
 
-        <section className="flex w-full max-w-[800px] flex-col gap-[var(--s-section-to-subsection-gap)]">
+        <section id="outcome" className="flex w-full max-w-[800px] scroll-mt-[120px] flex-col gap-[var(--s-section-to-subsection-gap)]">
           <CaseHeader variant="h2" title="From Idea To Validated Product" tags={["Outcome"]} />
           <Body
             variant="text"
@@ -150,6 +164,7 @@ export default function KidsPartyMarketplaceCasePage() {
           />
         </section>
 
+        <div id="reflections-and-learnings" className="w-full max-w-[800px] scroll-mt-[120px]">
         <SectionReflection
           amount={3}
           items={[
@@ -170,6 +185,7 @@ export default function KidsPartyMarketplaceCasePage() {
             }
           ]}
         />
+        </div>
 
         <NextCaseNavigation
           title={nextCase.title}

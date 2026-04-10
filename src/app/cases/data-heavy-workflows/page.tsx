@@ -5,6 +5,7 @@ import { Body } from "@/components/Body";
 import { CaseHeader } from "@/components/CaseHeader";
 import { SectionReflection } from "@/components/SectionReflection";
 import { BackNavigation } from "@/components/case/BackNavigation";
+import { CaseTableOfContents } from "@/components/case/CaseTableOfContents";
 import { NextCaseNavigation } from "@/components/case/NextCaseNavigation";
 
 const currentCase = CASES[2];
@@ -20,14 +21,24 @@ const CUSTOM_PROPERTIES_1_SRC = "/cases/data-heavy-workflows/custom-properties-1
 const CUSTOM_PROPERTIES_2_SRC = "/cases/data-heavy-workflows/custom-properties-2.png";
 const CUSTOM_PROPERTIES_3_SRC = "/cases/data-heavy-workflows/custom-properties-3.png";
 const CUSTOM_PROPERTIES_4_SRC = "/cases/data-heavy-workflows/custom-properties-4.png";
+const TOC_ITEMS = [
+  { id: "overview", label: "Overview" },
+  { id: "problem-framing", label: "Problem framing" },
+  { id: "design-strategy", label: "Design strategy" },
+  { id: "key-feature-1", label: "Feature: Dashboard" },
+  { id: "key-feature-2", label: "Feature: Dynamic Properties" },
+  { id: "outcome", label: "Outcome" },
+  { id: "reflections-and-learnings", label: "Learnings" }
+];
 
 export default function DataHeavyWorkflowsCasePage() {
   return (
     <main className="w-full bg-[var(--s-page-background)]">
+      <CaseTableOfContents items={TOC_ITEMS} />
       <div className="flex w-full flex-col items-center gap-[var(--s-section-to-section-gap)] px-[var(--s-grid-system-margin)] py-[var(--s-grid-system-vertical-padding)]">
         <BackNavigation />
 
-        <section className="flex w-full max-w-[800px] flex-col gap-[var(--s-section-to-subsection-gap)]">
+        <section id="overview" className="flex w-full max-w-[800px] scroll-mt-[120px] flex-col gap-[var(--s-section-to-subsection-gap)]">
           <CaseHeader
             variant="h1"
             title={currentCase.title}
@@ -45,7 +56,10 @@ export default function DataHeavyWorkflowsCasePage() {
           />
         </section>
 
-        <section className="h-[858px] w-full max-w-[1352px] overflow-hidden rounded-[var(--s-card-radius)] bg-[var(--s-media-section-background)] p-3 max-[1400px]:h-auto">
+        <section
+          data-toc-contrast-zone="true"
+          className="h-[858px] w-full max-w-[1352px] overflow-hidden rounded-[var(--s-card-radius)] bg-[var(--s-media-section-background)] p-3 max-[1400px]:h-auto"
+        >
           <div className="grid w-full grid-cols-2 gap-3 max-[1100px]:grid-cols-2 max-[700px]:grid-cols-1">
             <HeroImage src={HERO_1_SRC} alt="Data-heavy workflows hero image one" />
             <HeroImage src={HERO_2_SRC} alt="Data-heavy workflows hero image two" />
@@ -54,7 +68,7 @@ export default function DataHeavyWorkflowsCasePage() {
           </div>
         </section>
 
-        <section className="flex w-full max-w-[800px] flex-col gap-[var(--s-section-to-subsection-gap)]">
+        <section id="problem-framing" className="flex w-full max-w-[800px] scroll-mt-[120px] flex-col gap-[var(--s-section-to-subsection-gap)]">
           <CaseHeader
             variant="h2"
             title="Fragmentation in a Data-Heavy Product"
@@ -83,7 +97,7 @@ export default function DataHeavyWorkflowsCasePage() {
           />
         </section>
 
-        <section className="flex w-full max-w-[800px] flex-col gap-[var(--s-section-to-subsection-gap)]">
+        <section id="design-strategy" className="flex w-full max-w-[800px] scroll-mt-[120px] flex-col gap-[var(--s-section-to-subsection-gap)]">
           <CaseHeader
             variant="h2"
             title="Turning Fragmentation into Scalable Design"
@@ -127,7 +141,7 @@ export default function DataHeavyWorkflowsCasePage() {
           />
         </section>
 
-        <section className="flex w-full max-w-[800px] flex-col gap-[var(--s-section-to-subsection-gap)]">
+        <section id="key-feature-1" className="flex w-full max-w-[800px] scroll-mt-[120px] flex-col gap-[var(--s-section-to-subsection-gap)]">
           <CaseHeader
             variant="h2"
             title="From Brief Requirements to an Actionable Admin Dashboard"
@@ -175,7 +189,7 @@ export default function DataHeavyWorkflowsCasePage() {
           </div>
         </section>
 
-        <section className="flex w-full max-w-[800px] flex-col gap-[var(--s-section-to-subsection-gap)]">
+        <section id="key-feature-2" className="flex w-full max-w-[800px] scroll-mt-[120px] flex-col gap-[var(--s-section-to-subsection-gap)]">
           <CaseHeader
             variant="h2"
             title="Designing for Dynamic, Scalable Data Management"
@@ -224,7 +238,7 @@ export default function DataHeavyWorkflowsCasePage() {
           </div>
         </section>
 
-        <section className="flex w-full max-w-[800px] flex-col gap-[var(--s-section-to-subsection-gap)]">
+        <section id="outcome" className="flex w-full max-w-[800px] scroll-mt-[120px] flex-col gap-[var(--s-section-to-subsection-gap)]">
           <CaseHeader variant="h2" title="Delivering Value at Scale" tags={["Outcome"]} />
           <Body
             variant="text"
@@ -254,6 +268,7 @@ export default function DataHeavyWorkflowsCasePage() {
           />
         </section>
 
+        <div id="reflections-and-learnings" className="w-full max-w-[800px] scroll-mt-[120px]">
         <SectionReflection
           amount={4}
           items={[
@@ -278,6 +293,7 @@ export default function DataHeavyWorkflowsCasePage() {
             }
           ]}
         />
+        </div>
 
         <NextCaseNavigation
           title={nextCase.title}

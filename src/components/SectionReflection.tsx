@@ -27,7 +27,7 @@ const fallbackItems: ReflectionItem[] = [
 
 export function SectionReflection({
   amount = 4,
-  title = "Reflection & Learnings",
+  title = "Learnings",
   items = fallbackItems,
   className
 }: SectionReflectionProps) {
