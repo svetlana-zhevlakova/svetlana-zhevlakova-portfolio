@@ -10,9 +10,7 @@ export default function HomePage() {
               Hey, I’m Svetlana.
             </h1>
             <p className="text-[length:var(--s-typography-callout-callout-size)] font-normal leading-[var(--s-typography-callout-callout-line)]">
-              I shape experiences for teams and users in complex B2B and B2B2C
-              products, creating structured, scalable solutions that focus on key
-              priorities.
+              Product designer backed by 9 years in software engineering. I design complex B2B systems where ambiguity is high, constraints are real, and structure doesn't exist yet.
             </p>
           </section>
 
@@ -21,28 +19,28 @@ export default function HomePage() {
               className="h-full"
               tags={["B2B2C", "Marketplace"]}
               title="Building a marketplace that connects parents with kids’ party venues"
-              focusText="MVP design / prototyping."
+              focusText="Defined and designed the core experience for a new marketplace from 0 to 1 and  evolved it post-launch."
               href="/cases/kids-party-marketplace"
             />
             <CaseCard
               className="h-full"
               tags={["R&D", "AI"]}
               title="Turning a failing mood tracker into a reflection-driven product concept"
-              focusText="Engagement loops / reflective check-ins / LLM evaluation framework."
+              focusText="Diagnosed why engagement collapsed and reframed the product around meaningful reflection. Defined an AI output quality framework to guide design decisions."
               href="/cases/reflection-driven-mood-tracker"
             />
             <CaseCard
               className="h-full"
               tags={["B2B", "SaaS"]}
-              title="Designing actionable workflows in a data-heavy platform"
-              focusText="Admin dashboard / complex data tables / delivery process improvements."
+              title="Structuring design decisions and actionable workflows in a data-heavy platform"
+              focusText="Designed complex data workflows within strict technical and UI constraints. Introduced functional documentation that improved delivery across the team."
               href="/cases/data-heavy-workflows"
             />
             <CaseCard
               className="h-full"
               tags={["Leadership", "Culture"]}
-              title="Establishing design function & mentorship in a service company"
-              focusText="Team autonomy / high-quality delivery."
+              title="Building a design function from zero in a service company"
+              focusText="Joined as the company's first designer. Built processes, grew a junior designer to mid-level, and made design a trusted part of delivery."
               href="/cases/leadership-and-culture"
             />
           </section>

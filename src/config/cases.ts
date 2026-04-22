@@ -23,14 +23,14 @@ export const CASES: CaseMeta[] = [
   },
   {
     slug: "data-heavy-workflows",
-    title: "Designing Actionable Workflows in a Data-Heavy Platform",
+    title: "Structuring Design Decisions and Actionable Workflows in a Data-Heavy Platform",
     tags: ["B2B", "SaaS"],
     focus:
       "Admin dashboard / complex data tables / delivery process improvements / design mentorship."
   },
   {
     slug: "leadership-and-culture",
-    title: "Establishing Design Function & Mentorship in a Service Company",
+    title: "Building a Design Function From Zero in a Service Company",
     tags: ["Leadership", "Culture"],
     focus:
       "Team autonomy / high-quality delivery."
