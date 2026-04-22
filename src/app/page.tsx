@@ -10,7 +10,7 @@ export default function HomePage() {
               Hey, I’m Svetlana.
             </h1>
             <p className="text-[length:var(--s-typography-callout-callout-size)] font-normal leading-[var(--s-typography-callout-callout-line)]">
-              Product designer backed by 9 years in software engineering. I design complex B2B systems where ambiguity is high, constraints are real, and structure doesn't exist yet.
+              Product designer backed by 9 years in software engineering. I design complex B2B systems where ambiguity is high, constraints are real, and structure doesn&apos;t exist yet.
             </p>
           </section>
 
