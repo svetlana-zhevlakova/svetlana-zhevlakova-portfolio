@@ -31,7 +31,7 @@ export function MobileVersionBanner() {
   if (isClosed) return null;
 
   return (
-    <div className="w-full bg-[var(--p-primary-color-primary100)] px-[var(--s-grid-system-margin)] py-2 text-[var(--s-section-text)] min-[1280px]:hidden">
+    <div className="w-full bg-[var(--p-primary-color-primary100)] px-[var(--s-grid-system-margin)] py-2 text-[var(--s-section-text)] hidden max-[1279px]:block">
       <div className="flex items-start justify-between gap-2">
       <p className="text-[length:var(--p-typography-size-font-size14)] font-normal leading-[var(--p-typography-line-height-line-height14)]">
         Mobile version of this portfolio is in progress. You may notice some issues.

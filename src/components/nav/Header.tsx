@@ -101,7 +101,7 @@ export function Header({
       <div className="relative flex w-full items-center justify-between">
         <LogoButton href="/" aria-label="Home" />
 
-        <nav className="hidden items-center gap-10 min-[1280px]:flex" aria-label="Primary">
+        <nav className="flex items-center gap-10 max-[1279px]:hidden" aria-label="Primary">
           {items.map((item) => (
             <Button
               key={item.href}
@@ -127,18 +127,20 @@ export function Header({
           </Button>
         </nav>
 
-        <IconButton
-          aria-label="Toggle navigation menu"
-          aria-expanded={isMenuOpen}
-          onClick={handleMenuToggle}
-          variant={isMenuOpen ? "Variant2" : "Default"}
-          icon={isMenuOpen ? <CloseIcon /> : undefined}
-          className="relative z-50 bg-[rgba(255,255,255,0.8)] min-[1280px]:hidden"
-        />
+        <div className="hidden max-[1279px]:block">
+          <IconButton
+            aria-label="Toggle navigation menu"
+            aria-expanded={isMenuOpen}
+            onClick={handleMenuToggle}
+            variant={isMenuOpen ? "Variant2" : "Default"}
+            icon={isMenuOpen ? <CloseIcon /> : undefined}
+            className="relative z-50 bg-[rgba(255,255,255,0.8)]"
+          />
+        </div>
 
         {isMenuOpen ? (
           <nav
-            className="fixed inset-0 z-40 flex items-start justify-center bg-[rgba(255,255,255,0.78)] px-[var(--s-grid-system-margin)] pt-[100px] backdrop-blur-xl min-[1280px]:hidden"
+            className="fixed inset-0 z-40 hidden max-[1279px]:flex items-start justify-center bg-[rgba(255,255,255,0.78)] px-[var(--s-grid-system-margin)] pt-[100px] backdrop-blur-xl"
             aria-label="Mobile navigation"
           >
             <div className="flex w-full max-w-[360px] flex-col items-center gap-4 rounded-[var(--s-card-radius)] bg-[rgba(255,255,255,0.78)] p-4">
