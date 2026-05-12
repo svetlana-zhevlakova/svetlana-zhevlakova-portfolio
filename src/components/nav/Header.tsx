@@ -91,90 +91,91 @@ export function Header({
   };
 
   return (
-    <header
-      className={cx(
-        "fixed inset-x-0 top-0 z-50 w-full bg-[rgba(255,255,255,0.78)] px-[var(--s-grid-system-margin)] py-5 backdrop-blur-md",
-        className
-      )}
-      data-name="Header"
-    >
-      <div className="relative flex w-full items-center justify-between">
-        <LogoButton href="/" aria-label="Home" />
+    <>
+      <header
+        className={cx(
+          "fixed inset-x-0 top-0 z-50 w-full bg-[rgba(255,255,255,0.78)] px-[var(--s-grid-system-margin)] py-5 backdrop-blur-md",
+          className
+        )}
+        data-name="Header"
+      >
+        <div className="relative flex w-full items-center justify-between">
+          <LogoButton href="/" aria-label="Home" />
 
-        <nav className="flex items-center gap-10 max-[1279px]:hidden" aria-label="Primary">
-          {items.map((item) => (
-            <Button
-              key={item.href}
-              variant="link"
-              href={item.href}
-              target={item.external ? "_blank" : undefined}
-              rel={item.external ? "noreferrer noopener" : undefined}
-              onClick={
-                item.label === "Resume" || item.label === "LinkedIn"
-                  ? () => trackHeaderClick(item.label, item.href)
-                  : undefined
-              }
-            >
-              {item.label}
-            </Button>
-          ))}
-          <Button
-            variant="primary"
-            href={ctaHref}
-            onClick={() => trackHeaderClick("Contact me", ctaHref)}
-          >
-            Contact me
-          </Button>
-        </nav>
-
-        <div className="hidden max-[1279px]:block">
-          <IconButton
-            aria-label="Toggle navigation menu"
-            aria-expanded={isMenuOpen}
-            onClick={handleMenuToggle}
-            variant={isMenuOpen ? "Variant2" : "Default"}
-            icon={isMenuOpen ? <CloseIcon /> : undefined}
-            className="relative z-50 bg-[rgba(255,255,255,0.8)]"
-          />
-        </div>
-
-        {isMenuOpen ? (
-          <nav
-            className="fixed inset-0 z-40 hidden max-[1279px]:flex items-start justify-center bg-[rgba(255,255,255,0.78)] px-[var(--s-grid-system-margin)] pt-[100px] backdrop-blur-xl"
-            aria-label="Mobile navigation"
-          >
-            <div className="flex w-full max-w-[360px] flex-col items-center gap-4 rounded-[var(--s-card-radius)] bg-[rgba(255,255,255,0.78)] p-4">
-              {items.map((item) => (
-                <Button
-                  key={`mobile-${item.href}`}
-                  variant="link"
-                  href={item.href}
-                  target={item.external ? "_blank" : undefined}
-                  rel={item.external ? "noreferrer noopener" : undefined}
-                  onClick={() => {
-                    if (item.label === "Resume" || item.label === "LinkedIn") {
-                      trackHeaderClick(item.label, item.href);
-                    }
-                    handleMenuClose();
-                  }}
-                >
-                  {item.label}
-                </Button>
-              ))}
+          <nav className="flex items-center gap-10 max-[1279px]:hidden" aria-label="Primary">
+            {items.map((item) => (
               <Button
-                variant="primary"
-                href={ctaHref}
+                key={item.href}
+                variant="link"
+                href={item.href}
+                target={item.external ? "_blank" : undefined}
+                rel={item.external ? "noreferrer noopener" : undefined}
+                onClick={
+                  item.label === "Resume" || item.label === "LinkedIn"
+                    ? () => trackHeaderClick(item.label, item.href)
+                    : undefined
+                }
+              >
+                {item.label}
+              </Button>
+            ))}
+            <Button
+              variant="primary"
+              href={ctaHref}
+              onClick={() => trackHeaderClick("Contact me", ctaHref)}
+            >
+              Contact me
+            </Button>
+          </nav>
+
+          <div className="hidden max-[1279px]:block">
+            <IconButton
+              aria-label="Toggle navigation menu"
+              aria-expanded={isMenuOpen}
+              onClick={handleMenuToggle}
+              variant={isMenuOpen ? "Variant2" : "Default"}
+              icon={isMenuOpen ? <CloseIcon /> : undefined}
+            />
+          </div>
+        </div>
+      </header>
+
+      {isMenuOpen ? (
+        <nav
+          className="fixed inset-x-0 bottom-0 top-[92px] z-40 flex items-center justify-center pb-[20vh] bg-[rgba(255,255,255,0.78)] backdrop-blur-md min-[1280px]:hidden"
+          aria-label="Mobile navigation"
+        >
+          <div className="flex flex-col items-center gap-[var(--p-spacing-space20)]">
+            {items.map((item) => (
+              <Button
+                key={`mobile-${item.href}`}
+                variant="link"
+                href={item.href}
+                target={item.external ? "_blank" : undefined}
+                rel={item.external ? "noreferrer noopener" : undefined}
                 onClick={() => {
-                  trackHeaderClick("Contact me", ctaHref);
+                  if (item.label === "Resume" || item.label === "LinkedIn") {
+                    trackHeaderClick(item.label, item.href);
+                  }
                   handleMenuClose();
                 }}
               >
-                Contact me
+                {item.label}
               </Button>
-            </div>
-          </nav>
-        ) : null}
-      </div>
-    </header>
+            ))}
+            <Button
+              variant="primary"
+              href={ctaHref}
+              onClick={() => {
+                trackHeaderClick("Contact me", ctaHref);
+                handleMenuClose();
+              }}
+            >
+              Contact me
+            </Button>
+          </div>
+        </nav>
+      ) : null}
+    </>
   );
 }

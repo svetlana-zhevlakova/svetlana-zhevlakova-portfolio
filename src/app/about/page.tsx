@@ -6,19 +6,19 @@ export default function AboutPage() {
   return (
     <main className="flex w-full flex-1 bg-[var(--s-page-background)]">
       <div className="flex w-full flex-1 px-[var(--s-grid-system-margin)] py-10">
-        <section className="flex w-full flex-1 items-start gap-[var(--s-section-to-section-gap)] max-[1200px]:flex-col">
-          <div className="relative h-[624px] w-[418px] shrink-0 overflow-hidden max-[1200px]:mx-auto max-[1200px]:h-[320px] max-[1200px]:w-[214px]">
+        <section className="flex w-full flex-1 items-start gap-[var(--s-section-to-section-gap)] max-[1279px]:flex-col">
+          <div className="relative h-[624px] w-[418px] shrink-0 overflow-hidden rounded-[var(--s-media-section-image-radius)] max-[1279px]:aspect-[1224/1828] max-[1279px]:h-auto max-[1279px]:w-full">
             <Image
               src={PHOTO_SRC}
               alt="Portrait of Svetlana Zhevlakova"
               fill
-              sizes="(min-width: 1200px) 418px, 214px"
+              sizes="(min-width: 1280px) 418px, 100vw"
               className="object-cover"
               priority
             />
           </div>
 
-          <div className="flex h-[624px] w-[896px] max-w-full flex-col items-start justify-between max-[1200px]:h-auto max-[1200px]:w-full max-[1200px]:gap-[var(--s-section-to-subsection-gap)]">
+          <div className="flex h-[624px] w-[896px] max-w-full flex-col items-start justify-between max-[1279px]:h-auto max-[1279px]:w-full max-[1279px]:gap-[var(--s-section-to-subsection-gap)]">
             <div className="w-full max-w-[800px] text-[var(--s-section-text)]">
               <div className="flex flex-col gap-[var(--s-section-to-subsection-gap)]">
                 <div className="flex flex-col gap-[var(--s-section-to-title-gap)]">

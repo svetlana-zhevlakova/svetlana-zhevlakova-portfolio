@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { CookieConsentBanner } from "@/components/CookieConsentBanner";
-import { MobileVersionBanner } from "@/components/MobileVersionBanner";
 import { Header } from "@/components/nav/Header";
 import { Footer } from "@/components/Footer";
 
@@ -51,7 +50,6 @@ export default function RootLayout({
       >
         <Header />
         <div aria-hidden="true" className="h-[92px] shrink-0" />
-        <MobileVersionBanner />
         <div className="flex flex-1 flex-col">{children}</div>
         <Footer />
         <CookieConsentBanner />
