@@ -55,33 +55,33 @@ export default function KidsPartyMarketplaceCasePage() {
 
         <section
           data-toc-contrast-zone="true"
-          className="h-[600px] w-full max-w-[1301px] overflow-hidden rounded-[var(--s-card-radius)] bg-[var(--s-media-section-background)] p-3 max-[1200px]:h-auto"
+          className="h-[600px] w-full max-w-[1301px] overflow-hidden rounded-[var(--s-card-radius)] bg-[var(--s-media-section-background)] p-3 max-[1279px]:h-auto"
         >
-          <div className="grid h-full w-full grid-cols-[721px_266px_266px] gap-3 max-[1200px]:grid-cols-1">
-            <div className="relative h-full min-h-[240px] overflow-hidden rounded-[var(--s-media-section-image-radius)]">
+          <div className="grid h-full w-full grid-cols-[721px_266px_266px] gap-3 max-[1279px]:grid-cols-2">
+            <div className="relative h-full overflow-hidden rounded-[var(--s-media-section-image-radius)] max-[1279px]:col-span-2 max-[1279px]:aspect-[1442/1152] max-[1279px]:h-auto">
               <Image
                 src={HERO_1_SRC}
                 alt="Marketplace desktop listing and map views"
                 fill
-                sizes="(min-width: 1301px) 721px, 100vw"
+                sizes="(min-width: 1280px) 721px, 100vw"
                 className="rounded-[var(--s-media-section-image-radius)] object-cover"
               />
             </div>
-            <div className="relative h-full min-h-[240px] overflow-hidden rounded-[var(--s-media-section-image-radius)]">
+            <div className="relative h-full overflow-hidden rounded-[var(--s-media-section-image-radius)] max-[1279px]:aspect-[532/1152] max-[1279px]:h-auto">
               <Image
                 src={HERO_2_SRC}
                 alt="Marketplace mobile browse experience"
                 fill
-                sizes="(min-width: 1301px) 266px, 100vw"
+                sizes="(min-width: 1280px) 266px, 50vw"
                 className="rounded-[var(--s-media-section-image-radius)] object-cover"
               />
             </div>
-            <div className="relative h-full min-h-[240px] overflow-hidden rounded-[var(--s-media-section-image-radius)]">
+            <div className="relative h-full overflow-hidden rounded-[var(--s-media-section-image-radius)] max-[1279px]:aspect-[532/1152] max-[1279px]:h-auto">
               <Image
                 src={HERO_3_SRC}
                 alt="Marketplace mobile venue details screen"
                 fill
-                sizes="(min-width: 1301px) 266px, 100vw"
+                sizes="(min-width: 1280px) 266px, 50vw"
                 className="rounded-[var(--s-media-section-image-radius)] object-cover"
               />
             </div>
@@ -135,21 +135,21 @@ export default function KidsPartyMarketplaceCasePage() {
             text="For venue admins, I designed a calendar-based dashboard to make availability and required actions visible at a glance. I focused design effort on booking and availability flows, ensuring admins could quickly understand what needed attention and respond to requests. To stay within budget, I accepted scope reductions and introduced a simplified table view prioritizing unconfirmed bookings."
           />
           <div className="grid w-full grid-cols-1 gap-[var(--s-section-to-subsection-gap)]">
-            <div className="relative h-[499px] w-full overflow-hidden rounded-[var(--s-card-radius)] border border-[var(--s-media-section-border)]">
+            <div className="relative h-[499px] w-full overflow-hidden rounded-[var(--s-card-radius)] border border-[var(--s-media-section-border)] max-[1279px]:aspect-[1596/998] max-[1279px]:h-auto">
               <Image
                 src={ADMIN_CALENDAR_1_SRC}
                 alt="Admin calendar view"
                 fill
-                sizes="800px"
+                sizes="(max-width: 1279px) 100vw, 800px"
                 className="rounded-[var(--s-card-radius)] object-cover"
               />
             </div>
-            <div className="relative h-[499px] w-full overflow-hidden rounded-[var(--s-card-radius)] border border-[var(--s-media-section-border)]">
+            <div className="relative h-[499px] w-full overflow-hidden rounded-[var(--s-card-radius)] border border-[var(--s-media-section-border)] max-[1279px]:aspect-[2880/1800] max-[1279px]:h-auto">
               <Image
                 src={ADMIN_CALENDAR_2_SRC}
                 alt="Admin booking management view"
                 fill
-                sizes="800px"
+                sizes="(max-width: 1279px) 100vw, 800px"
                 className="rounded-[var(--s-card-radius)] object-cover"
               />
             </div>

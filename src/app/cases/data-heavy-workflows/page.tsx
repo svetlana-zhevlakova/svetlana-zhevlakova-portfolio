@@ -58,9 +58,9 @@ export default function DataHeavyWorkflowsCasePage() {
 
         <section
           data-toc-contrast-zone="true"
-          className="h-[858px] w-full max-w-[1352px] overflow-hidden rounded-[var(--s-card-radius)] bg-[var(--s-media-section-background)] p-3 max-[1400px]:h-auto"
+          className="h-[858px] w-full max-w-[1352px] overflow-hidden rounded-[var(--s-card-radius)] bg-[var(--s-media-section-background)] p-3 max-[1279px]:h-auto"
         >
-          <div className="grid w-full grid-cols-2 gap-3 max-[1100px]:grid-cols-2 max-[700px]:grid-cols-1">
+          <div className="grid w-full grid-cols-2 gap-3 max-[1279px]:grid-cols-1">
             <HeroImage src={HERO_1_SRC} alt="Data-heavy workflows hero image one" />
             <HeroImage src={HERO_2_SRC} alt="Data-heavy workflows hero image two" />
             <HeroImage src={HERO_3_SRC} alt="Data-heavy workflows hero image three" />
@@ -183,9 +183,9 @@ export default function DataHeavyWorkflowsCasePage() {
             }
           />
           <div className="grid w-full grid-cols-1 gap-[var(--s-section-to-subsection-gap)]">
-            <MediaImage src={DASHBOARD_1_SRC} alt="Admin dashboard overview" />
-            <MediaImage src={DASHBOARD_2_SRC} alt="Admin dashboard detailed table" />
-            <MediaImage src={DASHBOARD_3_SRC} alt="Admin dashboard workflow states" />
+            <MediaImage src={DASHBOARD_1_SRC} alt="Admin dashboard overview" imageWidth={1436} imageHeight={838} />
+            <MediaImage src={DASHBOARD_2_SRC} alt="Admin dashboard detailed table" imageWidth={1436} imageHeight={902} />
+            <MediaImage src={DASHBOARD_3_SRC} alt="Admin dashboard workflow states" imageWidth={1436} imageHeight={902} />
           </div>
         </section>
 
@@ -231,10 +231,10 @@ export default function DataHeavyWorkflowsCasePage() {
             }
           />
           <div className="grid w-full grid-cols-1 gap-[var(--s-section-to-subsection-gap)]">
-            <MediaImage src={CUSTOM_PROPERTIES_1_SRC} alt="Custom properties configuration one" />
-            <MediaImage src={CUSTOM_PROPERTIES_2_SRC} alt="Custom properties configuration two" />
-            <MediaImage src={CUSTOM_PROPERTIES_3_SRC} alt="Custom properties configuration three" />
-            <MediaImage src={CUSTOM_PROPERTIES_4_SRC} alt="Custom properties configuration four" />
+            <MediaImage src={CUSTOM_PROPERTIES_1_SRC} alt="Custom properties configuration one" imageWidth={1436} imageHeight={902} />
+            <MediaImage src={CUSTOM_PROPERTIES_2_SRC} alt="Custom properties configuration two" imageWidth={1436} imageHeight={902} />
+            <MediaImage src={CUSTOM_PROPERTIES_3_SRC} alt="Custom properties configuration three" imageWidth={1436} imageHeight={902} />
+            <MediaImage src={CUSTOM_PROPERTIES_4_SRC} alt="Custom properties configuration four" imageWidth={1436} imageHeight={902} />
           </div>
         </section>
 
@@ -311,12 +311,12 @@ type HeroImageProps = {
 
 function HeroImage({ src, alt }: HeroImageProps) {
   return (
-    <div className="relative h-[411px] overflow-hidden rounded-[var(--s-media-section-image-radius)] max-[1100px]:h-[320px] max-[700px]:h-[240px]">
+    <div className="relative h-[411px] overflow-hidden rounded-[var(--s-media-section-image-radius)] max-[1279px]:h-[240px]">
       <Image
         src={src}
         alt={alt}
         fill
-        sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 658px"
+        sizes="(max-width: 1279px) 100vw, 658px"
         className="rounded-[var(--s-media-section-image-radius)] object-cover"
       />
     </div>
@@ -326,16 +326,21 @@ function HeroImage({ src, alt }: HeroImageProps) {
 type MediaImageProps = {
   src: string;
   alt: string;
+  imageWidth: number;
+  imageHeight: number;
 };
 
-function MediaImage({ src, alt }: MediaImageProps) {
+function MediaImage({ src, alt, imageWidth, imageHeight }: MediaImageProps) {
   return (
-    <div className="relative h-[499px] w-full overflow-hidden rounded-[var(--s-card-radius)] border border-[var(--s-media-section-border)]">
+    <div
+      className="relative h-[499px] w-full overflow-hidden rounded-[var(--s-card-radius)] border border-[var(--s-media-section-border)] max-[1279px]:h-auto"
+      style={{ aspectRatio: `${imageWidth}/${imageHeight}` }}
+    >
       <Image
         src={src}
         alt={alt}
         fill
-        sizes="800px"
+        sizes="(max-width: 1279px) 100vw, 800px"
         className="rounded-[var(--s-card-radius)] object-cover"
       />
     </div>

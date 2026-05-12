@@ -118,7 +118,7 @@ export function CaseTableOfContents({ items, className }: CaseTableOfContentsPro
       ref={navRef}
       aria-label="Case table of contents"
       className={cx(
-        "fixed left-[calc(var(--s-grid-system-margin)-var(--s-content-item-horizontal-padding))] top-1/2 z-30 hidden w-fit max-w-[300px] -translate-y-1/2 flex-col gap-1 min-[1280px]:flex",
+        "fixed left-[calc(var(--s-grid-system-margin)-var(--s-content-item-horizontal-padding))] top-1/2 z-30 flex w-fit max-w-[300px] -translate-y-1/2 flex-col gap-1 max-[1279px]:hidden",
         className
       )}
     >
