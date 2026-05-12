@@ -8,7 +8,6 @@ import { BackNavigation } from "@/components/case/BackNavigation";
 import { CaseTableOfContents } from "@/components/case/CaseTableOfContents";
 import { NextCaseNavigation } from "@/components/case/NextCaseNavigation";
 
-const currentCase = CASES[3];
 const nextCase = CASES[0];
 const HERO_1_SRC = "/cases/leadership-and-culture/hero-1.png";
 const TOC_ITEMS = [
@@ -49,14 +48,14 @@ export default function LeadershipAndCultureCasePage() {
 
         <section
           data-toc-contrast-zone="true"
-          className="h-[547px] w-full max-w-[1352px] overflow-hidden rounded-[var(--s-card-radius)] bg-[var(--s-media-section-background)] p-3 max-[1400px]:h-auto"
+          className="h-[547px] w-full max-w-[1352px] overflow-hidden rounded-[var(--s-card-radius)] bg-[var(--s-media-section-background)] p-3 max-[1279px]:h-auto"
         >
-          <div className="relative h-[523px] w-full overflow-hidden rounded-[var(--s-media-section-image-radius)] max-[1400px]:h-[360px] max-[900px]:h-[260px]">
+          <div className="relative h-[523px] w-full overflow-hidden rounded-[var(--s-media-section-image-radius)] max-[1279px]:aspect-[2656/1046] max-[1279px]:h-auto">
             <Image
               src={HERO_1_SRC}
               alt="Design task completion trend chart"
               fill
-              sizes="(max-width: 900px) 100vw, 1328px"
+              sizes="(max-width: 1279px) 100vw, 1328px"
               className="rounded-[var(--s-media-section-image-radius)] object-cover"
             />
           </div>

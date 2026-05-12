@@ -53,33 +53,33 @@ export default function ReflectionDrivenMoodTrackerCasePage() {
 
         <section
           data-toc-contrast-zone="true"
-          className="h-[600px] w-full max-w-[1307px] overflow-hidden rounded-[var(--s-card-radius)] bg-[var(--s-media-section-background)] p-3 max-[1200px]:h-auto"
+          className="h-[600px] w-full max-w-[1307px] overflow-hidden rounded-[var(--s-card-radius)] bg-[var(--s-media-section-background)] p-3 max-[1279px]:h-auto"
         >
-          <div className="grid h-full w-full grid-cols-[334px_394px_531px] gap-3 max-[1200px]:grid-cols-1">
-            <div className="relative h-[366px] min-h-[240px] overflow-hidden rounded-[var(--s-media-section-image-radius)] max-[1200px]:h-full">
+          <div className="grid h-full w-full grid-cols-[334px_394px_531px] gap-3 max-[1279px]:grid-cols-2 max-[1279px]:items-start">
+            <div className="relative h-[366px] overflow-hidden rounded-[var(--s-media-section-image-radius)] max-[1279px]:aspect-[668/732] max-[1279px]:h-auto">
               <Image
                 src={HERO_1_SRC}
                 alt="Mood check-in interface"
                 fill
-                sizes="(min-width: 1301px) 334px, 100vw"
+                sizes="(min-width: 1280px) 334px, 50vw"
                 className="rounded-[var(--s-media-section-image-radius)] object-cover"
               />
             </div>
-            <div className="relative h-full min-h-[240px] overflow-hidden rounded-[var(--s-media-section-image-radius)]">
+            <div className="relative h-full overflow-hidden rounded-[var(--s-media-section-image-radius)] max-[1279px]:aspect-[788/1152] max-[1279px]:h-auto">
               <Image
                 src={HERO_2_SRC}
                 alt="Insights dashboard detail"
                 fill
-                sizes="(min-width: 1301px) 394px, 100vw"
+                sizes="(min-width: 1280px) 394px, 50vw"
                 className="rounded-[var(--s-media-section-image-radius)] object-cover"
               />
             </div>
-            <div className="relative h-full min-h-[240px] overflow-hidden rounded-[var(--s-media-section-image-radius)]">
+            <div className="relative h-full overflow-hidden rounded-[var(--s-media-section-image-radius)] max-[1279px]:col-span-2 max-[1279px]:aspect-[1062/1152] max-[1279px]:h-auto">
               <Image
                 src={HERO_3_SRC}
                 alt="Analytics and trends dashboard"
                 fill
-                sizes="(min-width: 1301px) 531px, 100vw"
+                sizes="(min-width: 1280px) 531px, 100vw"
                 className="rounded-[var(--s-media-section-image-radius)] object-cover"
               />
             </div>
