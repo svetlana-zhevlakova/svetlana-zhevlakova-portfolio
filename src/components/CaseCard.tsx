@@ -148,7 +148,7 @@ export function CaseCard({ href, className, title, description, tags, role, team
         )}
       </div>
 
-      <div className="relative h-[calc(100vh-450px)] w-full shrink-0 overflow-hidden rounded-[var(--s-media-section-image-radius)] bg-[var(--s-media-section-background)]">
+      <div className="relative aspect-video w-full shrink-0 overflow-hidden rounded-[var(--s-media-section-image-radius)] bg-[var(--s-media-section-background)] min-[1200px]:aspect-auto min-[1200px]:h-[calc(100vh-450px)]">
         {media ?? (coverImage && (
           <Image src={coverImage} alt={title} fill className="object-cover" />
         ))}

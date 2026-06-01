@@ -1,6 +1,7 @@
 import { CaseCard } from "@/components/CaseCard";
 import { SlideshowMedia } from "@/components/SlideshowMedia";
 import { CarouselMedia } from "@/components/CarouselMedia";
+import { WaveformPlaceholder } from "@/components/WaveformPlaceholder";
 
 export default function HomePage() {
   return (
@@ -61,13 +62,7 @@ export default function HomePage() {
               role="Product Designer"
               team="Dev team, Project Manager, Business Owners"
               href="/cases/data-heavy-workflows"
-              media={
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <p className="text-[length:var(--s-typography-paragraph-base-size)] text-[var(--s-section-caption)]">
-                    Animation coming soon
-                  </p>
-                </div>
-              }
+              media={<WaveformPlaceholder />}
             />
             <CaseCard
               tags={["Leadership", "Culture"]}
@@ -76,13 +71,7 @@ export default function HomePage() {
               role="Design Lead"
               team="Junior Designer, Dev team, Management"
               href="/cases/leadership-and-culture"
-              media={
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <p className="text-[length:var(--s-typography-paragraph-base-size)] text-[var(--s-section-caption)]">
-                    Animation coming soon
-                  </p>
-                </div>
-              }
+              media={<WaveformPlaceholder />}
             />
           </section>
 

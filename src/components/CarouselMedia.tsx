@@ -89,7 +89,7 @@ export function CarouselMedia({ images }: { images: CarouselImage[] }) {
                 width={img.width}
                 height={img.height}
                 className="block w-auto"
-                style={{ height: "clamp(240px, calc(88vh - 396px), 460px)" }}
+                style={{ height: "clamp(130px, min(calc(78vh - 396px), calc(100vw * 0.44)), 360px)" }}
                 priority={i === 0}
               />
               <div
